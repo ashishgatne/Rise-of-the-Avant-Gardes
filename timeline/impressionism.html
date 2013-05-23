@@ -1,0 +1,433 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<title>The Impressionist Revolution</title>
+		<link rel="shortcut icon" href="../core/icons/favicon.png" />
+		<script src="../core/lib/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="lib/jquery.kinetic.js" type="text/javascript" charset="utf-8"></script>
+        <script src="lib/jquery.kinetic.offset.js" type="text/javascript" charset="utf-8"></script>
+        <script src="lib/jquery.easing.1.3.js" type="text/javascript"></script>
+        <script src="lib/modernizr.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/highslide-full.packed.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="../core/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/highslide.css" />
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Radley:400,400italic' rel='stylesheet' type='text/css'>
+		<link rel='stylesheet' media='all and (min-height: 748px)' href='css/impressionism_normal.css' />
+		<link rel='stylesheet' media='all and (max-height: 747px)' href='css/impressionism_lowres.css' />
+		<style>
+			.nav_exhibit { display:none; }
+			.caption_anchor { display: none; top: 8px !important; }
+		</style>
+		<script type="text/javascript">
+			hs.dimmingOpacity = 1;
+			hs.transitions = ['fade'];
+			hs.wrapperClassName = 'dark borderless floating-caption';
+			hs.expandDuration = 800;
+			hs.restoreDuration = 200;
+			hs.outlineType = null;
+			hs.showCredits = false;
+			hs.restoreCursor = null;
+			hs.expandCursor = null;
+			hs.marginLeft = 8;
+			hs.marginTop = 8;
+			hs.lang = {
+				cssDirection: 'ltr',
+				loadingText : 'loading',
+				loadingTitle : '',
+				focusTitle : '',
+				fullExpandTitle : '',
+				creditsText : '',
+				creditsTitle : '',
+				restoreTitle : ''
+			};
+		</script>
+		<script>
+			$(document).ready(function() {
+				var screenPPI = document.getElementById('ppitest').offsetWidth/3;
+				$('.scaling').append('<p id="scaled_text">All exhibits are at 1:' + screenPPI.toFixed(0) + ' scale.</p>');
+				$('body').css('display', 'none');
+				$('body').fadeIn(1000);
+  
+				$('.nav_timeline').click(function(event) {
+					event.preventDefault();
+					newLocation = ('../canvas/canvas.html' + window.location.hash);
+					$('body').fadeOut(400, newpage);
+				});
+				function newpage() {
+					window.location = newLocation;
+					$('body').fadeIn(800);
+				}
+				goDoIt();
+				if (Modernizr.touch){
+					/*DO NOTHING FOR NOW*/	
+				} else {
+					$('.arrow').delay(100).fadeIn(1000);
+				}
+				var urlHash = window.location.hash;
+				if (urlHash) {
+					switch (urlHash) {
+						case "#impressionism":
+							$('#wrapper').kinetic('chapter1');
+							break;
+						case "#neo-impressionism":
+							$('#wrapper').kinetic('chapter2');
+							break;
+						case "#post-impressionism":
+							$('#wrapper').kinetic('chapter3');
+							break;
+						}
+					}
+				}
+			);
+			$(window).resize(function() {
+				goDoIt();
+			});	
+			function goDoIt() {
+				if (window.innerWidth > window.innerHeight) {
+					hs.captionOverlay.position = "rightpanel";
+					hs.captionOverlay.width = "100%";
+				} else {
+					hs.captionOverlay.position = "bottompanel";
+					hs.captionOverlay.width = "480px";
+				}
+			}
+		</script>
+    </head>
+    <body>
+		<div class="navigate nav_exhibit" onclick="return hs.close();"></div>
+		<div id="bookmarks">
+			<nav>
+				<a class="anchors" id="chapter1" href="#">Impressionism</a>
+				<a class="anchors" id="chapter2" href="#">Neo&ndash;Impressionism</a>
+				<a class="anchors" id="chapter3" href="#">Post&ndash;Impressionism</a>
+			</nav> 
+    	</div>
+        <div id="container">
+          	<div class="navigate nav_timeline" onclick=""></div>
+        	
+        	<div id="ppitest" style="width:1cm; padding:0px"></div>
+        	<div id="arrow_lft" class = "arrow"></div>
+    		<div id="arrow_rht" class = "arrow"></div>
+            <div id="wrapper">
+                <div id="inner">
+                	<div class="timeline"><h1>The Impressionist Revolution</h1></div>
+                	<div class="scaling"></div>
+					<div class="movement" id="impressionism"><h2>impressionism</h2></div>
+					<div class="movement_end" id="impressionism_end"></div>
+					<div class="movement" id="impressionism_floor"></div>		
+					<div class="movement_end" id="impressionism_floor_end"></div>	
+					<div class="movement" id="neo-impressionism"><h2>neo-impressionism</h2></div>
+					<div class="movement_end" id="neo-impressionism_end"></div>
+					<div class="movement" id="post-impressionism"><h2>post-impressionism</h2></div>
+					<div class="movement_end" id="post-impressionism_end"></div>
+					<div class="exhibit highslide-gallery" id="exhibit_1863_olympia">
+						<a href="exhibits/1863_olympia_x.jpg" class="highslide" onclick="return hs.expand(this);">
+							<img class="artwork" src="exhibits/1863_olympia_s.jpg" alt="1863 - Olympia">
+						</a>
+						<div class="highslide-caption">
+							<h4>Olympia</h4>
+							<p class="exhibit_whowhen">&Eacute;douard Manet - 1863</p>
+							<p class="exhibit_details">130.5cm &times; 190cm, oil on canvas</p>
+							<p class="exhibit_details">Mus&eacute;e d'Orsay, Paris</p>
+							<p class="exhibit_caption">With Olympia, Manet reworked the traditional theme of the female nude, using a strong, uncompromising technique. Both the subject matter and its depiction explain the scandal caused by this painting at the 1865 Salon. The painting deviates from the academic canon in its style, characterised by broad, quick brushstrokes, studio lighting that eliminates mid-tones, large color surfaces and shallow depth. Instead of a smooth idealised nude, Manet painted a woman whose nakedness is starkly emphasised by the light.</p>
+							
+						</div>
+						<p class="infobox" id="infobox_1863_olympia"><em>Olympia</em><br />&Eacute;douard Manet</p>
+					</div>
+					<div class="exhibit highslide-gallery" id="exhibit_1872_impression">
+						<a href="exhibits/1873_impression_soleil_levant_x.jpg" class="highslide" onclick="return hs.expand(this);">
+							<img class="artwork" src="exhibits/1873_impression_soleil_levant_s.jpg" alt="1873 - Impression, soleil levant">
+						</a>
+						<div class="highslide-caption">
+							<h4>Impression,<br />soleil levant</h4>
+							<p class="exhibit_altname">Impression, Sunrise</p>
+							<p class="exhibit_whowhen">Claude Monet - 1872</p>
+							<p class="exhibit_details">48cm &times; 63cm, oil on canvas</p>
+							<p class="exhibit_details">Mus&eacute;e Marmottan Monet, Paris</p>
+							<p class="exhibit_caption">Widely regarded as Monet’s single most famous painting, when the painting was first shown to the public in the <em>L’Exposition des Révoltés</em>&mdash;an exhibition independent of the Salon that was organised by Monet, Bazille, Pissarro, and their friends. Many critics were extremely disapproving of the rebel group’s work, especially that of Monet. In the April issue of <em>Le Charivari</em>, a critic named Louis Leroy judgmentally entitled his article &ldquo;Exhibition of the Impressionists&rdquo;, thereby coining the term inspired by the title of Monet’s painting &mdash; Impression, Sunrise.</p>						
+						</div>
+						<p class="infobox" id="infobox_1872_impression"><em>Impression, Sunrise</em><br />Claude Monet</p>
+					</div>
+					<div class="exhibit" id="exhibit_1874_profiles">
+						<div class="profiles" id="profile_manet">
+							<img class="image" src="profiles/impressionism_manet_s.jpg" alt="artist">
+							<p class="biodata">&Eacute;douard Manet<br />1832 &ndash; 1883</p>
+						</div>
+						<div class="profiles" id="profile_monet">
+							<img class="image" src="profiles/impressionism_monet_s.jpg" alt="artist">
+							<p class="biodata">Claude Monet<br />1840 &ndash; 1926</p>
+						</div>
+						<div class="profiles" id="profile_renoir">
+							<img class="image" src="profiles/impressionism_renoir_s.jpg" alt="artist">
+							<p class="biodata">Auguste Renoir<br />1841 &ndash; 1919</p>
+						</div>
+						<div class="profiles" id="profile_sisley">
+							<img class="image" src="profiles/impressionism_sisley_s.jpg" alt="artist">
+							<p class="biodata">Alfred Sisley<br />1839 &ndash; 1899</p>
+						</div>
+						<div class="profiles" id="profile_bazille">
+							<img class="image" src="profiles/impressionism_bazille_s.jpg" alt="artist">
+							<p class="biodata">Fr&eacute;d&eacute;ric Bazille<br />1841 &ndash; 1870</p>
+						</div>
+						<div class="profiles" id="profile_degas">
+							<img class="image" src="profiles/impressionism_degas_s.jpg" alt="artist">
+							<p class="biodata">Edgar Degas<br />1834 &ndash; 1917</p>
+						</div>
+					</div>
+					<div class="exhibit highslide-gallery" id="exhibit_1876_bronzeage">
+							<img src="exhibits/1876_lage_dairain_s.png" alt="1876 - L'Age d'airain">
+					</div>
+					<div class="exhibit highslide-gallery" id="exhibit_1876_dancemoulin">
+						<a href="exhibits/1876_bal_du_moulin_de_la_galette_x.jpg" class="highslide" onclick="return hs.expand(this)">
+							<img class="artwork" src="exhibits/1876_bal_du_moulin_de_la_galette_s.jpg" alt="1873 - Bal du moulin de la Galette">
+						</a>
+						<div class="highslide-caption">
+							<h4>Bal du moulin de<br />la Galette</h4>
+							<p class="exhibit_altname">Dance at Le moulin de la Galette</p>
+							<p class="exhibit_whowhen">Auguste Renoir - 1876</p>
+							<p class="exhibit_details">131cm &times; 175cm, oil on canvas</p>
+							<p class="exhibit_details">Mus&eacute;e d'Orsay, Paris</p>
+							<p class="exhibit_caption">This painting is doubtless Renoir's most important work of the 1870s and was shown at the Impressionist exhibition in 1877. Though some of his friends appear in the picture, Renoir's main aim was to convey the vivacious and joyful atmosphere of this popular dance garden on the Butte Montmartre. The entire painting is a sea of happy faces, except for a man sitting on the right who seems to be in a pensive mood. Renoir has done a brilliant job on the effect of light on the scene. The light seems to flicker with life, yet it has dappled patches of shade and this adds to the lifelike nature and the quality of the painting.</p>
+						</div>
+						<p class="infobox" id="infobox_1876_dancemoulin"><em>Dance at Le moulin de la Galette</em><br />Auguste Renoir</p>
+					</div>
+					<div class="exhibit" id="exhibit_1879_littledancer">
+						<img src="exhibits/1879_la_petite_danseuse_de_quatorze_ans_s.png" alt="1879 - La Petite Danseuse de Quatorze Ans">
+					</div>
+					<div class="exhibit highslide-gallery" id="exhibit_1884_grandejatte">
+						<a href="exhibits/1884_un_dimanche_apresmidi_a_llle_de_la_grande_jatte_x.jpg" class="highslide" onclick="return hs.expand(this)">
+							<img class="artwork" src="exhibits/1884_un_dimanche_apresmidi_a_llle_de_la_grande_jatte_s.jpg" alt="1879 - Un dimanche apres-midi a l'ile de la Grande Jatte">
+						</a>
+						<div class="highslide-caption">
+							<h4>Un dimanche apr&egrave;s-midi &agrave; l'&Icirc;le de la Grande Jatte</h4>
+							<p class="exhibit_altname">A Sunday Afternoon on the Island of La Grande Jatte</p>
+							<p class="exhibit_whowhen">Georges Seurat - 1884</p>
+							<p class="exhibit_details">207.6cm &times; 308cm, oil on canvas</p>
+							<p class="exhibit_details">Art Institute of Chicago</p>
+							<p class="exhibit_caption">Georges Seurat spent over two years painting A Sunday Afternoon, focusing meticulously on the landscape of the park. He reworked the original as well as completed numerous preliminary drawings and oil sketches. He would sit in the park and make numerous sketches of the various figures in order to perfect their form. Motivated by study in optical and colour theory, Seurat contrasted miniature dots of colours that, through optical unification, form a single hue in the viewer's eye. He believed that this form of painting, called divisionism at the time but now known as pointillism, would make the colours more brilliant and powerful than standard brush strokes.</p>
+						</div>
+						<p class="infobox" id="infobox_1884_grandejatte"><em>A Sunday Afternoon on the Island of La Grande Jatte</em><br />Georges Seurat</p>
+					</div>
+					<div class="exhibit" id="exhibit_1883_profiles">
+						<div class="profiles" id="profile_seurat">
+							<img class="image" src="profiles/neoimpressionism_seurat_s.jpg" alt="artist">
+							<p class="biodata">Georges Seurat<br />1859 &ndash; 1891</p>
+						</div>
+						<div class="profiles" id="profile_signac">
+							<img class="image" src="profiles/neoimpressionism_signac_s.jpg" alt="artist">
+							<p class="biodata">Paul Signac<br />1863 &ndash; 1935</p>
+						</div>
+					</div>
+					<div class="exhibit" id="exhibit_1884_colourwheel">
+						<img src="exhibits/1886_cercle_chromatique_s.jpg" alt="1886 - Cercle Chromatique">
+					</div>
+					<div class="exhibit highslide-gallery" id="exhibit_1887_selfportrait">
+						<a href="exhibits/1889_de_sterrennacht_x.jpg" class="highslide" onclick="return hs.expand(this)">
+							<img class="artwork" src="exhibits/1889_de_sterrennacht_s.jpg" alt="1889 - De sterrennacht">
+						</a>
+						<div class="highslide-caption">
+							<h4>De sterrennacht</h4>
+							<p class="exhibit_altname">The Starry Night</p>
+							<p class="exhibit_whowhen">Vincent van Gogh - 1889</p>
+							<p class="exhibit_details">73.7cm &times; 92.1cm, oil on canvas</p>
+							<p class="exhibit_details">Museum of Modern Art,<br/>New York City</p>
+							<p class="exhibit_caption">From the moment of his arrival in Arles in February 1888, Van Gogh was constantly preoccupied with the representation of &ldquo;night effects&rdquo;. In April 1888, he wrote to his brother Theo: &ldquo;I need a starry night with cypresses or maybe above a field of ripe wheat.&rdquo; He first painted a corner of nocturnal sky in Cafe Terrace on the <em>Place du Forum</em>, Arles. Next came this view of the Rh&ocirc;ne in which he marvellously transcribed the colours he perceived in the dark.</p>
+						</div>						
+						<p class="infobox" id="infobox_1887_selfportrait"><em>The Starry Night</em><br />Vincent van Gogh</p>
+					</div>
+					<div class="exhibit highslide-gallery" id="exhibit_1890_felixfeneon">
+						<a href="exhibits/1890_portrait_de_m_felix_feneon_l.jpg" class="highslide" onclick="return hs.expand(this)">
+							<img class="artwork" src="exhibits/1890_portrait_de_m_felix_feneon_s.jpg" alt="1890 - Portrait de M. Felix Feneon">
+						</a>
+						<div class="highslide-caption">
+							<h4>Portrait d'F&eacute;lix F&eacute;n&eacute;on, Opus 217</h4>
+							<p class="exhibit_altname">Portrait of F&eacute;lix F&eacute;n&eacute;on, Opus 217</p>
+							<p class="exhibit_whowhen">Paul Signac - 1890</p>
+							<p class="exhibit_details">92.5cm &times; 73.5cm, oil on canvas</p>
+							<p class="exhibit_details">Museum of Modern Art,<br/>New York City</p>
+							<p class="exhibit_caption">In this painting Signac portrays his friend F&eacute;lix F&eacute;n&eacute;on, an influential French critic. Rather than literally depicting his appearance, Signac suggests his character, using line, colour, pattern, and pose to evoke F&eacute;n&eacute;on’s theatrical personality and creative energy. The title refers to the combination of sounds, lines, and colours that symbolist artists drew upon to convey the inner world of their subjects. In this portrait Signac captures the dynamic movement implied in his title by using a technique called pointillism.</p>
+						</div>	
+						<p class="infobox" id="infobox_1890_felixfeneon"><em>Portrait of F&eacute;lix F&eacute;n&eacute;on, Opus 217</em><br />Paul Signac</p>
+					</div>
+					<div class="exhibit" id="exhibit_1890_profiles">
+						<div class="profiles" id="profile_vangogh">
+							<img class="image" src="profiles/postimpressionism_vangogh_s.jpg" alt="artist">
+							<p class="biodata">Vincent van Gogh<br />1853 &ndash; 1890</p>
+						</div>
+						<div class="profiles" id="profile_gauguin">
+							<img class="image" src="profiles/postimpressionism_gauguin_s.jpg" alt="artist">
+							<p class="biodata">Paul Gauguin<br />1848 &ndash; 1903</p>
+						</div>
+						<div class="profiles" id="profile_cezanne">
+							<img class="image" src="profiles/postimpressionism_cezanne_s.jpg" alt="artist">
+							<p class="biodata">Paul C&eacute;zanne<br />1839 &ndash; 1906</p>
+						</div>
+					</div>
+					<div class="exhibit" id="exhibit_1897_nousnousnous">
+							<img class="artwork" src="exhibits/1897_dou_venons_nous_que_sommes_nous_ou_allons_nous_s.jpg" alt="1897 - D'ou Venons Nous / Que Sommes Nous / Ou Allons Nous">
+						<p class="infobox" id="infobox_1897_nousnousnous"><em>Where Do We Come From? What Are We? Where Are We Going?</em><br />Paul Gauguin</p>
+					</div>
+					<div class="exhibit highslide-gallery" id="exhibit_1900_thebathers">
+						<a href="exhibits/1900_les_grandes_baigneuses_x.jpg" class="highslide" onclick="return hs.expand(this)">
+							<img class="artwork" src="exhibits/1900_les_grandes_baigneuses_s.jpg" alt="1900 - Les Grandes Baigneuses">
+						</a>
+						<div class="highslide-caption">
+							<h4>Baigneuses</h4>
+							<p class="exhibit_altname">Bathers</p>
+							<p class="exhibit_whowhen">Paul C&eacute;zanne - 1905</p>
+							<p class="exhibit_details">127.2cm &times; 196.1cm, oil on canvas</p>
+							<p class="exhibit_details">National Gallery, London</p>
+							<p class="exhibit_caption">With each version of the bathers, C&eacute;zanne moved away from the traditional presentation of paintings, intentionally creating works which would not appeal to the novice viewer. He did this in order to avoid fleeting fads and give a timeless quality to his work, and in so doing paved the way for future artists to disregard current trends and paint pieces which would appeal equally to all generations. The abstract nude females present in <em>Bathers</em> give the painting tension and density.It is exceptional among his work in symmetrical dimensions, with the adaption of the nude forms to the triangular pattern of the trees and river. Comparisons are also often made with the other famous group of nude women of the same period, Picasso's most renowned work <em>Les Demoiselles d'Avignon</em>.</p>
+						</div>	
+						<p class="infobox" id="infobox_1900_thebathers"><em>Bathers</em><br />Paul C&eacute;zanne</p>
+					</div>
+					<div class="story" id="story_1863_olympia">
+						<h3>1863</h3>
+						<p id="story1863">
+						Manet's, anti-academic style as realised in <em>Olympia</em>, was rejected by the official <em>Paris Salon</em> and influential critics of the time.<span class="newparagraph"></span>This resulted in the formation of the <em>Salon des R&eacute;fuses</em> in the same year, allowing avant-garde painters to express their rejected works.
+						</p>
+					</div>
+					<div class="story" id="story_1872_impression">
+						<h3>1872</h3>
+						<p id="story1872">The movement gained its name after critic Leroy, reviewing the first major Impressionist exhibition, seized on the title of Monet's painting <em>Impression, Sunrise</em>, and satirised the group of painting nothing but impressions.<span class="newparagraph"></span>Impressionism is considered the first distinctly modern movement in painting.</p>
+					</div>
+					<div class="story" id="story_1874_description">
+						<h3><span class="story_title">The impressionist technique</span></h3>
+						<p>Reject academic principles in favour of representational art capturing sensory effects of a scene, painting <em>en plein air</em>.<span class="newparagraph"></span>Capture the optical effects of light and convey the passage of time and changes in atmosphere as a fleeting moment.<span class="newparagraph"></span>Darker shades replaced with intense colours using short, thick strokes that attributed to the unfinished aesthetic.</p>
+					</div>
+					<div class="story" id="story_1876_bronzeage">
+						<h3>1876</h3>
+						<p id="story1876">While the painters exhibited together and formed a distinct group, Impressionism in sculpture was less well defined and their existence debated.<span class="newparagraph"></span>Rodin's vigorous, spontaneous modelling and clear finger gestures are analogous to the impressionists' style of exaggerated and distressed brushwork.</p>
+					</div>
+					<div class="story" id="story_1880_endimpress">
+						<h3>1880</h3>
+						<p id="story1880">By this time, few of the original painters were working in a recognisably Impressionist manner.<span class="newparagraph"></span>Because of the group's stylistic fragmentation, works by newer artists may still be referred to as Impressionism, despite their remoteness from Impressionist practice.</p>
+					</div>
+					<div class="story" id="story_1881_neoimpress">
+						<h3>1884</h3>
+						<p id="story1884">Seurat’s most celebrated masterpiece, <em>A Sunday Afternoon on the Island of La Grande Jatte</em> took over two years to complete.<span class="newparagraph"></span>Dominating the <em>Soci&eacute;t&eacute; des Artistes Ind&eacute;pendants</em>, Seurat's scientific approach to colour signalled the beginning of Neo-Impressionism.</p>					
+					</div>
+					<div class="story" id="story_1884_description">
+						<h3><span class="story_title">Neo-impressionist aesthetics</span></h3>
+						<p>Colours no longer mixed on the palette, but instead placed as small dots on the canvas so they mix in the viewers' eyes and appear more vivid than traditional brush strokes.<span class="newparagraph"></span>Clear and well-defined contours around forms with luminescent surfaces that are carefully ordered and not random or spontaneous.<span class="newparagraph"></span>Painted landscapes and contemporary life in the studio instead of painting outdoors as the impressionists did.</p>
+					</div>
+					<div class="story" id="story_1886_divisionism">
+						<h3><span class="story_title">Divisionism &amp; Pointillism</span></h3>
+						<p id="story1866">Neo-impressionists painters based their scientific approach from the colour theories of Michel Eug&egrave;ne Chevreul who developed the <em>cercle chromatique</em>.<span class="newparagraph"></span>Divisionism developed along with another style, pointillism, which is defined specifically by the use of dots of paint and does not necessarily focus on the separation of colours.</p>
+					</div>
+					<div class="story" id="story_1888_selfportrait">
+						<h3>1888</h3>
+						<p id="story1888">Meanwhile, van Gogh and Gauguin shared a small apartment in Arles, France, and in the process forged an unsteady, but mutually constructive relationship.<span class="newparagraph"></span>They experimented with new approaches to painting, rejecting existing approaches to interpret form, colour and lighting, and led to the rise of Post-Impressionism.</p>					
+					</div>
+					<div class="story" id="story_1891_deathseurat">
+						<h3>1891</h3>
+						<p id="story1891">Following the early death of Seurat, were it not for Signac, Neo-Impressionism might have lost all momentum following the untimely tragedy.<span class="newparagraph"></span>They continued to expand over the next decade with an even more distinctive characteristic. Incorporation of political ideas, especially anarchism, started showing prominence.</p>					
+					</div>
+					<div class="story" id="story_1890_description">
+						<h3><span class="story_title">The post-impressionist style</span></h3>
+						<p>Vivid and unnatural colours with thick application of paint on canvas leaving the brush or knife strokes visible.<span class="newparagraph"></span>Emphasis on geometric forms with unrealistic distortion of objects, figures and perspective for an expressive effect.<span class="newparagraph"></span>Abandon journalistic intentions from the previous movements while focussing on real life subject matter.</p>
+					</div>
+					<div class="story" id="story_1895_gauguin">
+						<h3>1897</h3>
+						<p id="story1897">Under the influence of folk art and Japanese prints, Gauguin's work evolved towards Cloisonnism, a style of post-impressionist painting with bold and flat forms separated by dark contours. The cloisonnist separation of colours reflects an appreciation for discontinuity that is characteristic of Modernism.</p>
+					</div>
+					<div class="story" id="story_1900_postimpress">
+						<h3>1906</h3>
+						<p id="story1906">At the time of C&eacute;zanne's death, one of the master-pieces of modern art, <em>Bathers</em>, remained unfinished after seven years of work. C&eacute;zanne can be said to form the bridge to the next century's art movements such as Cubism.<span class="newparagraph"></span>C&eacute;zanne's work demonstrates a mastery of design, colour and composition, and his brushstrokes are clearly recognizable. Both Matisse and Picasso are said to have remarked that C&eacute;zanne was simply the father of them all.</p>
+					</div>
+					<div class="story" id="story_1914_conclusion">
+						<h3>1914</h3>
+						<p id="story1914">The declarations of the World War marked a major break in European cultural history. However, the Impressionist movements as a whole had far-reaching effects. Painters who began as impressionists developed other techniques, which started new movements in art such as Fauvism, Expressionism, Cubism among many others.<span class="newparagraph"></span>Today, in any gallery, the Impressionist galleries draw masses of visitors who respond to the spontaneity and the enjoyment with which Impressionists depicted their world.</p>
+					</div>
+                </div>
+            </div>
+            <script type="text/javascript">
+				hs.Expander.prototype.onBeforeExpand = function () {
+					$("#container").fadeOut(400);
+					$("#bookmarks").fadeOut(400);
+					$(".nav_timeline").fadeOut(400);
+					$(".nav_exhibit").delay(400).fadeIn(400);
+					$(".floating-caption").addClass("caption_anchor");
+					$(".caption_anchor").fadeIn(800);
+				};
+				hs.Expander.prototype.onAfterExpand = function () {
+					var imgW = $(".highslide-image").width();
+					var imgH = $(".highslide-image").height();
+					$(".highslide-full-expand").css("width", imgW);
+					$(".highslide-full-expand").css("height", imgH);
+				};				
+				hs.Expander.prototype.onDoFullExpand = function () {
+					$(".floating-caption").removeClass("caption_anchor");
+					hs.marginLeft = 0;
+					hs.marginTop = 0;
+				};
+				hs.Expander.prototype.onAfterClose = function () {
+					$(".nav_exhibit").fadeOut(200);
+					$(".nav_timeline").delay(200).fadeIn(800);
+					$("#container").delay(200).fadeIn(800);
+					$("#bookmarks").delay(200).fadeIn(800);
+					hs.marginLeft = 8;
+					hs.marginTop = 8;
+				};
+				hs.onKeyDown = function(sender, e) {
+					return false;
+				}
+				hs.onDimmerClick = function() {
+					return false;
+				}
+				hs.Expander.prototype.onImageClick = function () {
+         			return false;
+				};
+			</script>
+            <script type="text/javascript">
+                $('#wrapper').kinetic();
+				$('#arrow_lft').mousedown (function() {
+					$('#wrapper').kinetic('start', { velocity: -10 });
+					}) .mouseup (function() {
+					$('#wrapper').kinetic('end');
+				});
+				$('#arrow_rht').mousedown (function() {
+					$('#wrapper').kinetic('start', { velocity: 10 });
+					}) .mouseup (function() {
+					$('#wrapper').kinetic('end');
+				});
+				$('#chapter1').click(function(event){
+					event.preventDefault();
+					$("#container").focus();
+					$('#wrapper').kinetic('chapter1');
+					setTimeout(function(){location.hash = 'impressionism';},3000);
+					});
+				$('#chapter2').click(function(event){
+					event.preventDefault();
+					$("#container").focus();
+					$('#wrapper').kinetic('chapter2');
+					setTimeout(function(){location.hash = 'neo-impressionism';},3000);
+					});
+				$('#chapter3').click(function(event){
+					event.preventDefault();
+					$("#container").focus();
+					$('#wrapper').kinetic('chapter3');
+					setTimeout(function(){location.hash = 'post-impressionism';},3000);
+					});
+				$(window).resize(function () {
+                	setTimeout(function () {
+                		return hs.close();
+                	}, 100);
+                });
+            </script>
+        </div>
+        <!-- GOOGLE ANALYTICS TRACKING CODE -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-40910566-1', 'avnt.gr');
+		  ga('send', 'pageview');
+		</script>
+    </body>
+</html>
