@@ -9,36 +9,25 @@
 		<title>Rise of the Avant-Gardes</title>
 		<script src="core/lib/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="core/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="core/fonts/typography.css" />
 		<link rel="stylesheet" href="core/ios/add2home.css">
 		<script type="application/javascript" src="core/ios/add2home.js"></script>
 		<style>
-			@font-face {
-				font-family: Radley Regular;
-				src: url(core/fonts/Radley-Regular.ttf);
-				font-weight: 400;
-			}
-			@font-face {
-				font-family: Source Sans Pro Light;
-				src: url(core/fonts/SourceSansPro-Light.ttf);
-			}
-			@font-face {
-				font-family: Source Sans Pro Semibold;
-				src: url(core/fonts/SourceSansPro-Semibold.ttf);
-			}
 			#container		{ position: relative; max-width: 720px; margin-left: auto; margin-right: auto; cursor: default; }
-			.introduction	{ font-family: 'Source Sans Pro Light', sans-serif; font-size: 15pt; color:#666; line-height: 1.5; text-align: center; padding: 2em 0 2em 0;}
-			h1 				{ font-family: 'Radley Regular', serif; font-weight: 400; font-size: 36pt; color:#333; text-shadow: 0px 1px 2px #ccc; text-align: center; }
+			.introduction	{ font-family: 'Source Sans Pro', sans-serif; font-weight: 300; font-size: 15pt; color:#666; line-height: 1.5; text-align: center; padding: 2em 0 2em 0;}
+			h1 				{ font-family: 'Radley', serif; font-weight: 400; font-size: 36pt; color:#333; text-shadow: 0px 1px 2px #ccc; text-align: center; }
 			#title			{ font-size: 48pt; }
 			#button			{ margin:0 auto; text-align: center; width: 360px;  }
-			.enter			{ font-family: 'Source Sans Pro Semibold', sans-serif; color: #fff; font-size: 18pt; padding: 6pt 12pt 6pt 12pt; text-decoration: none; letter-spacing: 0.1em; background-color: #333; }
+			.enter			{ font-family: 'Source Sans Pro', sans-serif; font-weight: 700; color: #fff; font-size: 18pt; padding: 6pt 12pt 6pt 12pt; text-decoration: none; letter-spacing: 0.1em; background-color: #333; }
 			.enter:hover	{ background-color: #000; cursor: pointer; text-shadow: 0px 0px 4px #fff; }
 			.enter:active	{ background-color: #000; cursor: pointer; text-shadow: 0px 0px 4px #fff; }
 			#footer			{ position: fixed; bottom:0; width:100%; margin: 0 auto;}
-			.credit			{ font-family: 'Source Sans Pro Light', sans-serif; font-size: 12pt; color:#666; line-height: 1; text-align: center; padding: 1em; }
-			.contact		{ font-family: 'Source Sans Pro Semibold', sans-serif; color: #666; text-decoration: none; }
+			.credit			{ font-family: 'Source Sans Pro', sans-serif; font-weight: 300; font-size: 12pt; color:#666; line-height: 1; text-align: center; padding: 1em; }
+			.contact		{ font-family: 'Source Sans Pro', sans-serif; font-weight: 400; color: #666; text-decoration: none; }
 			.contact:hover	{ color: #333; text-decoration: underline; }
 			.contact:active	{ color: #000; text-decoration: none; }
 		</style>
+		<!--HACK: Use CSS to fade and center page elements-->
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$('#container').css("top", window.innerHeight/3);

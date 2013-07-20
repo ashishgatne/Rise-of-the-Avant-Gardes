@@ -1,0 +1,121 @@
+body						{ overflow: hidden; }
+div	 						{ -webkit-touch-callout: none;  -webkit-user-select: none;  -moz-user-select: none; }
+
+a							{ font-family: 'Source Sans Pro', sans-serif; font-weight: 300; font-size: 15pt; color:#666; text-decoration: none; }
+
+#wrapper 					{ overflow: hidden; }
+#inner 						{ position: relative; width: 13700px; height: 720px; }       
+
+.arrow 						{ position: fixed; top:350px; width: 70px; height: 100px; z-index: 1000; cursor:pointer; opacity:0.2; display:none;}
+.arrow:hover 				{ opacity:0.6; }
+.arrow:active 				{ opacity:1.0; }
+#arrow_lft  				{ left: 8px; background-image:url('../img/nav_arrows.svg'); background-position: right top; }
+#arrow_rht  				{ right:8px; background-image:url('../img/nav_arrows.svg'); background-position: left top; }
+
+.navigate					{ position: fixed; z-index: 100000; height: 42pt; width: 42pt; background-color: #333; background-size: 100%; background-repeat:no-repeat; cursor:pointer; }
+.navigate:hover				{ background-color: #000; }
+.navigate:active			{ background-color: #000; }
+.nav_timeline				{ top:692px; left:0;  background-image:url('../img/vector_back.svg');}
+.nav_exhibit				{ top:692px; right:0; background-image:url('../img/vector_exit.svg');}
+
+#bookmarks 					{ position: fixed; width: 100%; top:700px; text-align: center; }
+.anchors 					{ font-family: 'Radley', serif; font-weight: 400; color: #666; font-size: 21pt; font-variant:small-caps; line-height: 1.2; text-shadow: 0px 1px 2px #ccc; padding: 2pt 24pt; text-decoration: none; white-space:nowrap; }
+.anchors:active				{ color: #fff; background-color: #333; text-shadow: 0px 0px 2px #fff; }
+
+/*TITLE*/
+.timeline					{ position: absolute; top: 40px; left: 150px; }
+.scaling					{ position: absolute; top: 600px; left: 600px; }
+#scaled_text				{ font-family: 'Source Sans Pro', sans-serif; font-weight: 300; font-size: 9pt; color:#666; }
+
+/*MOVEMENTS*/
+.movement					{ position: absolute; height: 100px; background-color: #F5F5F5; }
+.movement_end				{ position: absolute; height: 100px; width: 400px; 
+								background-image: -ms-linear-gradient(left, #F5F5F5 0%, #FFFFFF 100%);
+								background-image: -moz-linear-gradient(left, #F5F5F5 0%, #FFFFFF 100%);
+								background-image: -webkit-linear-gradient(left, #F5F5F5 0%, #FFFFFF 100%);
+								background-image: linear-gradient(to right, #F5F5F5 0%, #FFFFFF 100%);
+							}
+#impressionism 				{ top: 210px; left: 0000px; width: 4750px; }
+#impressionism_end			{ top: 210px; left: 4750px; }
+#impressionism_floor		{ top: 640px; left: 0000px; width: 4850px; height:   2px; }
+#impressionism_floor_end	{ top: 640px; left: 4850px; width:  400px; height:   2px; }
+#neo-impressionism 			{ top: 070px; left: 4850px; width: 4450px; }
+#neo-impressionism_end		{ top: 070px; left: 9300px; }
+#post-impressionism 		{ top: 490px; left: 8000px; width: 5200px; }
+#post-impressionism_end		{ top: 490px; left:13200px; }
+
+.image 						{ width: 100%; height: 100%; }
+.noshadow					{ box-shadow: none; }
+
+/*EXHIBITS */
+.exhibit					{ position: absolute; box-shadow: 0px 1px 4px #ccc }
+.exhibit_altname			{ position: relative; font-family: 'Source Sans Pro', sans-serif; font-weight: 300; font-size: 09pt; color:#999; line-height: 1.2; padding:  0px 8px 0 16px; font-style: italic;}
+.exhibit_whowhen			{ position: relative; font-family: 'Source Sans Pro', sans-serif; font-weight: 300; font-size: 12pt; color:#666; line-height: 1.0; padding: 16px 8px 0 16px; }
+.exhibit_details			{ position: relative; font-family: 'Source Sans Pro', sans-serif; font-weight: 300; font-size: 09pt; color:#666; line-height: 1.2; padding:  0px 8px 0 16px; }
+.exhibit_caption			{ position: relative; font-family: 'Source Sans Pro', sans-serif; font-weight: 300; font-size: 09pt; color:#666; line-height: 1.2; padding: 16px 8px 32px 16px; }
+.infobox					{ position: absolute; font-family: 'Source Sans Pro', sans-serif; padding: 10px; color: #999; font-size: 9pt; width: 360px;}
+.artwork					{ display: block; }
+#exhibit_1863_olympia		{ top: 188px; left: 00600px; width: 570px; height: 392px; }
+#infobox_1863_olympia		{ left: 570px; top: 020px; }
+#exhibit_1872_impression	{ top: 188px; left: 01400px; width: 190px; height: 144px; }
+#infobox_1872_impression	{ left: 190px; top: 020px; }
+#exhibit_1874_profiles		{ top: 060px; left: 01750px; width: 600px; height: 400px; box-shadow: none;}
+#exhibit_1876_bronzeage		{ top: 170px; left: 02900px; width: 250px; height: 550px; box-shadow: none;}
+#exhibit_1876_dancemoulin	{ top: 188px; left: 03600px; width: 525px; height: 393px; }
+#infobox_1876_dancemoulin	{ left: 525px; top: 020px; }
+#exhibit_1879_littledancer	{ top: 360px; left: 04600px; width: 225px; height: 360px; box-shadow: none;}
+#exhibit_1884_grandejatte	{ top: 010px; left: 05400px; width: 924px; height: 623px; }
+#infobox_1884_grandejatte	{ left: 924px; top: 060px; }
+#exhibit_1883_profiles		{ top: 010px; left: 07450px; width: 400px; height: 200px; box-shadow: none;}
+#exhibit_1884_colourwheel	{ top: 236px; left: 07000px; width: 400px; height: 400px; box-shadow: none;}
+#exhibit_1887_selfportrait	{ top: 419px; left: 08650px; width: 276px; height: 221px; }
+#infobox_1887_selfportrait	{ left: 276px; top: 071px; }
+#exhibit_1890_felixfeneon	{ top: 010px; left: 09050px; width: 278px; height: 220px; }
+#infobox_1890_felixfeneon	{ left: 278px; top: 060px; }
+#exhibit_1890_profiles		{ top: 440px; left: 10000px; width: 600px; height: 200px; box-shadow: none;}
+#exhibit_1897_nousnousnous	{ top: 223px; left: 10700px; width:1124px; height: 417px; }
+#infobox_1897_nousnousnous	{ left:1124px; top: 267px; }
+#exhibit_1900_thebathers	{ top: 258px; left: 12350px; width: 588px; height: 382px; }
+#infobox_1900_thebathers	{ left: 588px; top: 232px; }
+
+/*PHOTOS*/
+.profiles					{ position: absolute; width: 160px; height: 160px; border: 10px solid #fff; box-shadow: 0px 1px 4px #ccc; }
+.biodata					{ position: absolute; top: 130px; left: 3px; font-family: 'Radley', serif; font-weight: 400; font-size: 12pt; color:#fff; line-height: 0.88; text-shadow: 0px 1px 2px #000000; }
+#profile_manet				{ top: 010px; left: 010px; }
+#profile_monet				{ top: 010px; left: 210px; }
+#profile_renoir				{ top: 010px; left: 410px; }
+#profile_sisley				{ top: 210px; left: 010px; }
+#profile_bazille			{ top: 210px; left: 210px; }
+#profile_degas				{ top: 210px; left: 410px; }
+#profile_seurat				{ top: 010px; left: 010px; }
+#profile_signac				{ top: 010px; left: 210px; }
+#profile_vangogh			{ top: 010px; left: 010px; }
+#profile_gauguin			{ top: 010px; left: 210px; }
+#profile_cezanne			{ top: 010px; left: 410px; }
+
+/*STORIES */
+.story						{ position: absolute; font-family: 'Source Sans Pro', sans-serif; font-weight: 300; font-size: 15pt; color:#666; line-height: 1.2; list-style-type:none; }
+.story_title				{ font-size: 27pt; }
+
+#story_1863_olympia			{ top: 320px; left: 0150px; width: 400px; height: 300px; }
+#story_1872_impression		{ top: 320px; left: 1250px; width: 400px; height: 300px; }
+#story_1874_description		{ top: 320px; left: 2400px; width: 500px; height: 300px; }
+#story_1876_bronzeage		{ top: 320px; left: 3150px; width: 400px; height: 300px; }
+#story_1880_endimpress		{ top: 320px; left: 4200px; width: 400px; height: 300px; }
+#story_1881_neoimpress		{ top: 320px; left: 4950px; width: 400px; height: 300px; }
+#story_1884_description		{ top: 220px; left: 6420px; width: 500px; height: 400px; }
+#story_1886_divisionism		{ top: 220px; left: 7450px; width: 500px; height: 400px; }
+#story_1888_selfportrait	{ top: 220px; left: 8100px; width: 500px; height: 220px; }
+#story_1891_deathseurat		{ top: 220px; left: 9400px; width: 500px; height: 220px; }
+#story_1890_description		{ top: 120px; left:10020px; width: 500px; height: 270px; }
+#story_1895_gauguin			{ top: 040px; left:10700px; width: 900px; height: 220px; }
+#story_1900_postimpress		{ top: 040px; left:11900px; width: 400px; height: 600px; }
+#story_1914_conclusion		{ top: 040px; left:13000px; width: 500px; height: 600px; }
+
+/*TYPEFACES*/
+
+h1 { font-family: 'Radley', serif; font-weight: 400; font-size: 72pt; color:#f5f5f5; }
+h2 { font-family: 'Source Sans Pro', sans-serif; font-weight: 200; font-size: 48pt; color:#666; padding:16px; position: relative; left: 0.2em; text-shadow: 0px 2px 1px #fff; }
+h3 { font-family: 'Radley', serif; font-weight: 400; font-size: 42pt; color:#666; text-shadow: 0px 1px 2px #ccc; }
+h4 { font-family: 'Source Sans Pro', sans-serif; font-weight: 200; font-size: 18pt; color:#666; text-shadow: 0px 1px 2px #ccc; padding-left: 14px; font-style: italic;}
+.newparagraph { display:block; height: 1em; }

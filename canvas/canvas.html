@@ -17,7 +17,7 @@
 		<script src="lib/jquery.kinetic.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="lib/jquery.kinetic.offset.js" type="text/javascript" charset="utf-8"></script>
 		<!--Adobe Edge Runtime-->
-		<script type="text/javascript" charset="utf-8" src="canvas_source_edgePreload.js"></script>
+		<script type="text/javascript" charset="utf-8" src="canvas_custom_preload.js"></script>
 		<style>
 			.edgeLoad-avnt_canvas { visibility:hidden; }
 		</style>
@@ -26,10 +26,12 @@
 	    var comp;
 			$(document).ready(function() {
 				goDoIt();
+				/* Position loading graphic (currently 256*256) */
 				var loadPosT = (window.innerHeight/2)-128;
 				var loadPosL = (window.innerWidth/2)-128;
 				$('#loader').css("top",loadPosT);
 				$('#loader').css("left",loadPosL);
+				/* Bring last selected movement in focus on page load */
 				var urlHash = window.location.hash;
 				if (urlHash) {
 					switch (urlHash) {
@@ -45,19 +47,17 @@
 					}
 				}
 			});
+			/* Page reload on browser window resize*/
 			$(window).resize(function() {
 				goDoIt();
-			});	
+			});
+			/* HACK: Set browser height for compatibility with the draggable div element */
 			function goDoIt() {
 				$('#wrapper').css("height",window.innerHeight);
 			}
 		</script>
 
 		<style>
-			@font-face {
-				font-family: Source Sans Pro Light;
-				src: url(../core/fonts/SourceSansPro-Light.ttf);
-			}
             div	 { -webkit-touch-callout: none;  -webkit-user-select: none;  -moz-user-select: none; }
             #container { margin: 0 auto; width: 100%; }
             #wrapper { height: 720px; overflow: hidden; }
@@ -68,9 +68,6 @@
 			.navigate:hover				{ background-color: #000; }
 			.navigate:active			{ background-color: #000; }
 			.nav_search				{ bottom:0; right:0;  background-image:url('../timeline/img/vector_search.svg');}
-
-
-            .load_text { font-family: 'Source Sans Pro Light', sans-serif; font-size: 24pt; text-align: center; color: #666;}
             .noodle { display:none; }
             .action { display:none; }
 		</style>

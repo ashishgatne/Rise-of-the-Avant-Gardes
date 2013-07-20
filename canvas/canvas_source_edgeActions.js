@@ -19,7 +19,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
-         $('#loader').fadeOut(400);
+         $('#loader').fadeOut(250);
          
          var urlHash = window.location.hash;
          if (urlHash) {
@@ -465,22 +465,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    })("nav-close");
    //Edge symbol end:'nav-close'
-
-   //=========================================================
-   
-   //Edge symbol: 'nav-close_1'
-   (function(symbolName) {   
-   
-      })("nav-enter");
-   //Edge symbol end:'nav-enter'
-
-   //=========================================================
-   
-   //Edge symbol: 'nav-explore'
-   (function(symbolName) {   
-   
-   })("nav-explore");
-   //Edge symbol end:'nav-explore'
 
    //=========================================================
    
