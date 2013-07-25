@@ -33,15 +33,6 @@
 				$('#container').css("top", window.innerHeight/3);
 				$('body').css('display', 'none');
 				$('body').fadeIn(800);
-				$('.link').click(function(event) {
-					event.preventDefault();
-					newLocation = this.href;
-					$('body').fadeOut(400, newpage);
-				});
-				function newpage() {
-					window.location = newLocation;
-					$('body').fadeIn(800);
-				}
 			});
 			$(window).resize(function () {
 				setTimeout(function () {
