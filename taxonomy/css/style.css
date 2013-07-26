@@ -156,7 +156,8 @@ body {
 }
 
 #container {
-  padding: 8px;
+  height: 80%;
+  top: 64px;
 }
 
 .element {
@@ -258,6 +259,8 @@ body {
 
 #options {
   padding-bottom: 1.0em;
+  position: fixed;
+  bottom:0;
 }
 
 #options h3 {

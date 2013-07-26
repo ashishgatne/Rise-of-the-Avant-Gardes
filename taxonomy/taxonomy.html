@@ -5,21 +5,24 @@
         <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 		<title>Rise of the Avant-Gardes</title>
 		<link rel="shortcut icon" href="../core/icons/favicon.png" />
+		<script src="../core/lib/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/jquery.kinetic.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="../core/css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/taxonomy.css" />
 		<link rel="stylesheet" type="text/css" href="fonts/typography.css" />
-		<!-- scripts at bottom of page -->
-		<script src="../core/lib/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$('body').css('display', 'none');
 				$('body').fadeIn(800);
+				$('.arrow').delay(100).fadeIn(1000);
 			});
 		</script>
 	</head>
 	<body>
 		<div class="navigate nav_timeline" onclick="location.href='../canvas/canvas.html#impressionism';"></div>
+		<div id="arrow_lft" class = "arrow"></div>
+		<div id="arrow_rht" class = "arrow"></div>
 		<div id="options" class="clearfix combo-filters">
 			<div class="option-combo period">
 			<!--<h4>Era</h4>-->
@@ -33,13 +36,15 @@
 			<div class="option-combo type">
 			<!--<h4>Association</h4>-->
 				<ul class="filter option-set clearfix " data-filter-group="shape"> 
-					<li><a href="#filter-type-all" data-filter-value="" class="selected">All Kinds</a></li>
+					<li><a href="#filter-type-all" data-filter-value="" class="selected">Everything</a></li>
 					<li><a href="#filter-type-movements" data-filter-value=".movement">Movements</a></li>
-					<li><a href="#filter-type-schools" data-filter-value=".school">Schools</a></li>
-					<li><a href="#filter-type-people" data-filter-value=".people">People</a></li>
+					<li><a href="#filter-type-schools" data-filter-value=".school">Organisation</a></li>
+					<li><a href="#filter-type-people" data-filter-value=".people">Individuals</a></li>
 				</ul>
 			</div>
 		</div>
+		<div id="wrapper">
+            <div id="inner">
 		<div id="container" class="clearfix">
 			<div class="color-shape contemporary movement">Abstract Expressionism</div>
 			<div class="color-shape origins movement">Art and Craft</div>
@@ -71,7 +76,7 @@
 			<div class="color-shape contemporary movement">Happening</div>
 			<div class="color-shape contemporary movement">High Tech</div>
 			<div class="color-shape contemporary movement">Hyperrealism</div>
-			<div class="color-shape origins movement">Impressionism</div>
+			<div class="color-shape origins movement"><a href="../timeline/impressionism.html#impressionism">Impressionism</a></div>
 			<div class="color-shape contemporary movement">Tachism</div>
 			<div class="color-shape contemporary school">Independent Group</div>
 			<div class="color-shape contemporary movement">Installation</div>
@@ -84,16 +89,16 @@
 			<div class="color-shape worldwars movement">New Objectivity</div>
 			<div class="color-shape contemporary movement">Neo Expressionism</div>
 			<div class="color-shape contemporary movement">New Media</div>
-			<div class="color-shape origins movement">Neo Impressionism</div>
+			<div class="color-shape origins movement"><a href="../timeline/impressionism.html#neo-impressionism">Neo Impressionism</a></div>
 			<div class="color-shape contemporary movement">New Realism</div>
 			<div class="color-shape contemporary school">Nouveau Realistes</div>
 			<div class="color-shape worldwars movement">Novecento Italiano</div>
 			<div class="color-shape worldwars movement">Nationalist Realism</div>
 			<div class="color-shape contemporary movement">Op Art</div>
 			<div class="color-shape contemporary movement">Performance Art</div>
-			<div class="color-shape origins movement">Post Impressionism</div>
 			<div class="color-shape worldwars movement">Metaphysical Art</div>
 			<div class="color-shape contemporary movement">Pop Art</div>
+			<div class="color-shape origins movement"><a href="../timeline/impressionism.html#post-impressionism">Post Impressionism</a></div>
 			<div class="color-shape contemporary movement">Post-Painterly Abstraction</div>
 			<div class="color-shape worldwars movement">Precisionism</div>
 			<div class="color-shape worldwars school">Proletkult</div>
@@ -109,14 +114,28 @@
 			<div class="color-shape origins movement">Synchromism</div>
 			<div class="color-shape worldwars school">Vhkutemas</div>		
 		</div>
-		<script src="js/jquery.isotope.min.js"></script>
+			</div>
+		</div>
+		<script src="lib/jquery.isotope.min.js"></script>
 		<script>
 			$(function(){
+			$('#wrapper').kinetic();
+			$('#arrow_lft').mousedown (function() {
+				$('#wrapper').kinetic('start', { velocity: -10 });
+				}) .mouseup (function() {
+				$('#wrapper').kinetic('end');
+			});
+			$('#arrow_rht').mousedown (function() {
+				$('#wrapper').kinetic('start', { velocity: 10 });
+				}) .mouseup (function() {
+				$('#wrapper').kinetic('end');
+			});
 			var $container = $('#container'),
 				filters = {};
 
 				$container.isotope({
 					itemSelector : '.color-shape',
+					layoutMode : 'masonryHorizontal',
 					masonry : {
         				columnWidth : 80
       				},

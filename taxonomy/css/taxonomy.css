@@ -6,3 +6,12 @@
 #bookmarks 					{ position: fixed; width: 100%; top:700px; text-align: center; }
 .anchors 					{ font-family: 'Radley', serif; font-weight: 400; color: #666; font-size: 21pt; font-variant:small-caps; line-height: 1.2; text-shadow: 0px 1px 2px #ccc; padding: 2pt 24pt; text-decoration: none; white-space:nowrap; }
 .anchors:active				{ color: #fff; background-color: #333; text-shadow: 0px 0px 2px #fff; }
+
+#wrapper 					{ overflow: hidden; }
+#inner 						{ position: relative; width: 6000px; height: 600px; }
+
+.arrow 						{ position: fixed; top:40%; width: 70px; height: 100px; z-index: 1000; cursor:pointer; opacity:0.2; display:none; }
+.arrow:hover 				{ opacity:0.6; }
+.arrow:active 				{ opacity:1.0; }
+#arrow_lft  				{ left: 8px; background-image:url('../img/nav_arrows.svg'); background-position: right top; }
+#arrow_rht  				{ right:8px; background-image:url('../img/nav_arrows.svg'); background-position: left top; }
