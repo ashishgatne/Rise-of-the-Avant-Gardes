@@ -17,15 +17,21 @@
 		<script src="lib/jquery.kinetic.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="lib/jquery.kinetic.offset.js" type="text/javascript" charset="utf-8"></script>
 		<!--Adobe Edge Runtime-->
-		<script type="text/javascript" charset="utf-8" src="canvas_source_edgePreload.js"></script>
+		<script type="text/javascript" charset="utf-8" src="canvas_custom_preload.js"></script>
 		<style>
 			.edgeLoad-avnt_canvas { visibility:hidden; }
 		</style>
 		<!--Adobe Edge Runtime End-->
-		<script type="text/javascript">	
-		var comp;
+	    <script type="text/javascript">	
+	    var comp;
 			$(document).ready(function() {
 				goDoIt();
+				/* Position loading graphic (currently 256*256) */
+				var loadPosT = (window.innerHeight/2)-128;
+				var loadPosL = (window.innerWidth/2)-128;
+				$('#loader').css("top",loadPosT);
+				$('#loader').css("left",loadPosL);
+				/* Bring last selected movement in focus on page load */
 				var urlHash = window.location.hash;
 				if (urlHash) {
 					switch (urlHash) {
@@ -52,20 +58,22 @@
 		</script>
 
 		<style>
-			div	 { -webkit-touch-callout: none;  -webkit-user-select: none;  -moz-user-select: none; }
-			#container { margin: 0 auto; width: 100%; }
-			#wrapper { height: 720px; overflow: hidden; }
-			#inner { width: 4096px; height: 2560px; }
+            div	 { -webkit-touch-callout: none;  -webkit-user-select: none;  -moz-user-select: none; }
+            #container { margin: 0 auto; width: 100%; }
+            #wrapper { height: 720px; overflow: hidden; }
+            #inner { width: 4096px; height: 2560px; }
+            #block { position: fixed; top:0 ; left: 0; height: 1px; width: 1px; z-index: 100;}
+            #loader { position: fixed; height: 256px; width: 256px; background: url('../core/images/loading.svg') no-repeat fixed center; z-index: 1000;}
             .navigate					{ position: fixed; z-index: 100000; height: 42pt; width: 42pt; background-color: #333; background-size: 100%; background-repeat:no-repeat; cursor:pointer; display:none;}
 			.navigate:hover				{ background-color: #000; }
 			.navigate:active			{ background-color: #000; }
 			.nav_search				{ bottom:0; right:0;  background-image:url('../timeline/img/vector_search.svg');}
-			.noodle { display:none; }
-			.action { display:none; }
+            .noodle { display:none; }
+            .action { display:none; }
 		</style>
 	</head>
     <body>
-        <div class="navigate nav_search" onclick="location.href='../taxonomy/taxonomy.html';"></div>
+    	<div class="navigate nav_search" onclick="location.href='../taxonomy/taxonomy.html';"></div>
         <div id="container">
             <div id="wrapper">
             	<div id="inner">
@@ -79,7 +87,7 @@
                 $('#wrapper').kinetic('center');
             </script>
         </div>
-        <!-- GOOGLE ANALYTICS TRACKING CODE 
+        <!-- GOOGLE ANALYTICS TRACKING CODE -->
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -88,6 +96,6 @@
 
 		  ga('create', 'UA-40910566-1', 'avnt.gr');
 		  ga('send', 'pageview');
-		</script>-->
+		</script>
     </body>
 </html>
