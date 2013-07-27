@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link rel="shortcut icon" href="../core/icons/favicon.png" />
+        <link rel="apple-touch-icon" href="../core/icons/webclip.png" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>Rise of the Avant-Gardes</title>
+        <script src="lib/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <script src="lib/jquery.kinetic.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="lib/jquery.kinetic.offset.js" type="text/javascript" charset="utf-8"></script>
+        <!--Adobe Edge Runtime-->
+    <script type="text/javascript" charset="utf-8" src="canvas_edgePreload.js"></script>
+    <style>
+        .edgeLoad-avnt_canvas { visibility:hidden; }
+    </style>
+<!--Adobe Edge Runtime End-->
+        <script type="text/javascript"> 
+        var comp;
+            $(document).ready(function() {
+                setViewportHeight();
+                var urlHash = window.location.hash;
+                if (urlHash) {
+                    switch (urlHash) {
+                        case "#impressionism":
+                            $('#wrapper').kinetic('imp');
+                            break;
+                        case "#neo-impressionism":
+                            $('#wrapper').kinetic('nim');
+                            break;
+                        case "#post-impressionism":
+                            $('#wrapper').kinetic('pim');
+                            break;
+                    }
+                }
+            });
+            /* Page reload on browser window resize*/
+            $(window).resize(function() {
+                setViewportHeight();
+            });
+            /* HACK: Set browser height for compatibility with the draggable div element */
+            function setViewportHeight() {
+                $('#wrapper').css("height",window.innerHeight);
+            }
+        </script>
+        <style>
+            div                 { -webkit-touch-callout: none;  -webkit-user-select: none;  -moz-user-select: none; }
+            #container          { margin: 0 auto; width: 100%; }
+            #wrapper            { height: 720px; overflow: hidden; }
+            #inner              { width: 4096px; height: 2560px; }
+            #block              { position: fixed; top:0 ; left: 0; height: 1px; width: 1px; z-index: 100;}
+            .navigate           { position: fixed; z-index: 100000; height: 42pt; width: 42pt; background-color: #333; background-size: 100%; background-repeat:no-repeat; cursor:pointer; /*display: none;*/}
+            .navigate:hover     { background-color: #000; }
+            .navigate:active    { background-color: #000; }
+            .nav_search         { bottom:0; right:0;  background-image:url('img/vector_search.svg');}
+            .noodle             { display:none; }
+            .action             { display:none; }
+        </style>
+	</head>
+    <body>
+        <div class="navigate nav_search" onclick="location.href='../taxonomy/taxonomy.html';"></div>
+        <div id="container">
+            <div id="wrapper">
+            	<div id="inner">
+            		<div id="Stage" class="avnt_canvas"></div>
+            	</div>
+                <!--<div id="block"></div> PREVENTS AUTO SELECTION OF NODE ON THE TOP LEFT PIXEL-->
+            </div>
+            <script type="text/javascript" charset="utf-8">
+                $('#wrapper').kinetic();
+                $('#wrapper').kinetic('center');
+            </script>
+        </div>
+    </body>
+</html>
