@@ -13,11 +13,12 @@
 		<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<title>Rise of the Avant-Gardes</title>
 		<script src="../core/lib/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/jquery.easing.1.3.js" type="text/javascript"></script>
 		<link rel="stylesheet" type="text/css" href="../core/css/reset.css" />
 		<script src="lib/jquery.kinetic.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="lib/jquery.kinetic.offset.js" type="text/javascript" charset="utf-8"></script>
 		<!--Adobe Edge Runtime-->
-		<script type="text/javascript" charset="utf-8" src="canvas_source_edgePreload.js"></script>
+		<script type="text/javascript" charset="utf-8" src="canvas_custom_preload.js"></script>
 		<style>
 			.edgeLoad-avnt_canvas { visibility:hidden; }
 		</style>
@@ -25,7 +26,7 @@
 		<script type="text/javascript">	
 		var comp;
 			$(document).ready(function() {
-				goDoIt();
+				canvasSize();
 				var urlHash = window.location.hash;
 				if (urlHash) {
 					switch (urlHash) {
@@ -40,13 +41,14 @@
 							break;
 					}
 				}
+			/*ARROW: $('.arrow').delay(100).fadeIn(1000);*/
 			});
 			/* Page reload on browser window resize*/
 			$(window).resize(function() {
-				goDoIt();
+				canvasSize();
 			});
 			/* HACK: Set browser height for compatibility with the draggable div element */
-			function goDoIt() {
+			function canvasSize() {
 				$('#wrapper').css("height",window.innerHeight);
 			}
 		</script>
@@ -59,13 +61,28 @@
             .navigate					{ position: fixed; z-index: 100000; height: 42pt; width: 42pt; background-color: #333; background-size: 100%; background-repeat:no-repeat; cursor:pointer; display:none;}
 			.navigate:hover				{ background-color: #000; }
 			.navigate:active			{ background-color: #000; }
-			.nav_search				{ bottom:0; right:0;  background-image:url('../timeline/img/vector_search.svg');}
+			.nav_search					{ bottom:0; right:0;  background-image:url('../timeline/img/vector_search.svg');}
+			.arrow 						{ position: fixed;  z-index: 1000; cursor:pointer; opacity:0.2; display:none;}
+			.arrow:hover 				{ opacity:0.6; }
+			.arrow:active 				{ opacity:1.0; }
+			#arrow_lft  				{ 	top:40%; width: 70px; height: 100px; left: 8px;
+											background-image:url('../timeline/img/nav_arrows.svg'); background-position: right top; }
+			#arrow_rht  				{ 	top:40%; width: 70px; height: 100px; right:8px;
+											background-image:url('../timeline/img/nav_arrows.svg'); background-position: left top; }
+			#arrow_top  				{ 	top: 8px; width: 100px; height: 70px; left: 40%;
+											background-image:url('../timeline/img/dir_arrows.svg'); background-position: left bottom; }
+			#arrow_btm  				{ 	bottom: 8px; width: 100px; height: 70px; left: 40%;
+											background-image:url('../timeline/img/dir_arrows.svg'); background-position: left top; }
 			.noodle { display:none; }
 			.action { display:none; }
 		</style>
 	</head>
     <body>
         <div class="navigate nav_search" onclick="location.href='../taxonomy/taxonomy.html';"></div>
+        <div id="arrow_lft" class = "arrow"></div>
+    	<div id="arrow_rht" class = "arrow"></div>
+        <div id="arrow_top" class = "arrow"></div>
+    	<div id="arrow_btm" class = "arrow"></div>
         <div id="container">
             <div id="wrapper">
             	<div id="inner">
@@ -77,9 +94,29 @@
             <script type="text/javascript">
                 $('#wrapper').kinetic();
                 $('#wrapper').kinetic('center');
+                $('#arrow_lft').mousedown (function() {
+					$('#wrapper').kinetic('start', { velocity: -10 });
+					}) .mouseup (function() {
+					$('#wrapper').kinetic('end');
+				});
+				$('#arrow_rht').mousedown (function() {
+					$('#wrapper').kinetic('start', { velocity: 10 });
+					}) .mouseup (function() {
+					$('#wrapper').kinetic('end');
+				});
+				$('#arrow_top').mousedown (function() {
+					$('#wrapper').kinetic('start', { velocityY: -10 });
+					}) .mouseup (function() {
+					$('#wrapper').kinetic('end');
+				});
+				$('#arrow_btm').mousedown (function() {
+					$('#wrapper').kinetic('start', { velocityY: 10 });
+					}) .mouseup (function() {
+					$('#wrapper').kinetic('end');
+				});
             </script>
         </div>
-        <!-- GOOGLE ANALYTICS TRACKING CODE 
+        <!--GOOGLE ANALYTICS TRACKING CODE
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

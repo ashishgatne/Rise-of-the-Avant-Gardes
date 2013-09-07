@@ -1,0 +1,115 @@
+/*
+ * jReject (jQuery Browser Rejection Plugin)
+ * Version 1.0.0
+ * URL: http://jreject.turnwheel.com/
+ * Description: jReject is a easy method of rejecting specific browsers on your site
+ * Author: Steven Bower (TurnWheel Designs) http://turnwheel.com/
+ * Copyright: Copyright (c) 2009-2011 Steven Bower under dual MIT/GPL license.
+ */
+
+#jr_overlay {
+	top: 0;
+	left: 0;
+	padding: 0;
+	margin: 0;
+	z-index: 200;
+	position: absolute;
+}
+
+#jr_wrap {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	z-index: 300;
+	padding: 0;
+}
+
+#jr_inner {
+	position: relative;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	font-size: 16pt;
+	background: #FFF;
+	color: #666;
+	margin: 0 auto;
+	height: auto;
+	padding: 20px;
+
+}
+
+#jr_header {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 21pt;
+	font-weight: 500;
+	display: block;
+	color: #333;
+	padding: 12pt;
+	text-align: center;
+}
+
+#jr_inner p {
+	text-align: center;
+	padding: 5px;
+	margin: 0;
+}
+
+#jr_inner ul {
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#jr_inner ul li {
+	cursor: pointer;
+	float: center;
+	width: 120px;
+	height: 122px;
+	margin: 0 10px 10px 10px;
+	padding: 0;
+	text-align: center;
+}
+
+#jr_inner li a {
+	color: #333;
+	font-size: 0.8em;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+}
+
+#jr_inner li a:hover {
+	text-decoration: underline;
+}
+
+#jr_inner .jr_icon {
+	width: 100px;
+	height: 100px;
+	margin: 1px auto;
+	padding: 0;
+	background: transparent no-repeat scroll left top;
+	cursor: pointer;
+}
+
+#jr_close {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 700;
+	color: #666;
+	clear: both;
+	text-align: center;
+	padding: 40px;
+}
+
+#jr_close a {
+	color: #333;
+	width: auto;
+	text-decoration: none;
+	padding: 4pt 16pt;
+	border: 1px solid #666;
+}
+
+#jr_close p {
+	padding: 10px;
+	margin: 0;
+}

@@ -102,25 +102,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-      //Edge binding end
+      
 
       
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/impressionism.html#impressionism", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_imp');
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_imp');
 
       });
       //Edge binding end
@@ -208,13 +203,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/impressionism.html#impressionism", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2600, function(sym, e) {
          $(".imp-pim").fadeIn(250);
@@ -223,6 +212,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       
+
+      Symbol.bindElementAction(compId, symbolName, "${_action}", "click", function(sym, e) {
+         window.open("../timeline/impressionism.html#impressionism", "_self");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
+         window.open("../timeline/impressionism.html#impressionism", "_self");
+
+      });
+      //Edge binding end
 
    })("node-imp");
    //Edge symbol end:'node-imp'
@@ -288,23 +289,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-      //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/impressionism.html#post-impressionism", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_pim');
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_pim');
 
       });
       //Edge binding end
@@ -394,13 +390,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/impressionism.html#post-impressionism", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2600, function(sym, e) {
          $(".pim-fau").fadeIn(250);
@@ -415,6 +405,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       
+
+      Symbol.bindElementAction(compId, symbolName, "${_action}", "click", function(sym, e) {
+         window.open("../timeline/impressionism.html#post-impressionism", "_self");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
+         window.open("../timeline/impressionism.html#post-impressionism", "_self");
+
+      });
+      //Edge binding end
 
       })("node-pim");
    //Edge symbol end:'node-pim'
@@ -513,25 +515,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-         //Edge binding end
+      
 
       
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_cub');
 
       });
          //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_cub');
 
       });
          //Edge binding end
@@ -628,13 +625,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
       })("node-cub");
    //Edge symbol end:'node-cub'
@@ -688,23 +679,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-         //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/impressionism.html#neo-impressionism", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_nim');
 
       });
          //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_nim');
 
       });
          //Edge binding end
@@ -794,13 +780,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/impressionism.html#neo-impressionism", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2600, function(sym, e) {
          $(".nim-cub").fadeIn(250);
@@ -815,6 +795,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       
+
+      Symbol.bindElementAction(compId, symbolName, "${_action}", "click", function(sym, e) {
+         window.open("../timeline/impressionism.html#neo-impressionism", "_self");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
+         window.open("../timeline/impressionism.html#neo-impressionism", "_self");
+
+      });
+      //Edge binding end
 
          })("node-nim");
    //Edge symbol end:'node-nim'
@@ -868,23 +860,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-         //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_asm');
 
       });
          //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_asm');
 
       });
          //Edge binding end
@@ -994,13 +981,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
          })("node-asm");
    //Edge symbol end:'node-asm'
@@ -1054,23 +1035,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-         //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_dad');
 
       });
          //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_dad');
 
       });
          //Edge binding end
@@ -1174,13 +1150,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
          })("node-dad");
    //Edge symbol end:'node-dad'
@@ -1234,23 +1204,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-         //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_reg');
 
       });
          //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_reg');
 
       });
          //Edge binding end
@@ -1348,13 +1313,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
          })("node-reg");
    //Edge symbol end:'node-reg'
@@ -1408,23 +1367,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-         //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_inf');
 
       });
          //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_inf');
 
       });
          //Edge binding end
@@ -1520,13 +1474,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
          })("node-inf");
    //Edge symbol end:'node-inf'
@@ -1579,25 +1527,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-         //Edge binding end
+      
 
       
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_nda');
 
       });
          //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_nda');
 
       });
          //Edge binding end
@@ -1691,13 +1634,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
       })("node-nda");
    //Edge symbol end:'node-nda'
@@ -1751,23 +1688,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-            //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_coa');
 
       });
             //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_coa');
 
       });
             //Edge binding end
@@ -1867,13 +1799,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
             })("node-coa");
    //Edge symbol end:'node-coa'
@@ -1925,25 +1851,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-            //Edge binding end
+      
 
       
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_pfa');
 
       });
             //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_pfa');
 
       });
             //Edge binding end
@@ -2043,13 +1964,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
          })("node-pfa");
    //Edge symbol end:'node-pfa'
@@ -2103,23 +2018,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-            //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_flx');
 
       });
             //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_flx');
 
       });
             //Edge binding end
@@ -2227,13 +2137,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
             })("node-flx");
    //Edge symbol end:'node-flx'
@@ -2287,23 +2191,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-            //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_nex');
 
       });
             //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_nex');
 
       });
             //Edge binding end
@@ -2387,13 +2286,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
             })("node-nex");
    //Edge symbol end:'node-nex'
@@ -2610,25 +2503,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-            //Edge binding end
+      
 
       
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_pop');
 
       });
             //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_pop');
 
       });
             //Edge binding end
@@ -2736,13 +2624,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
          })("node-pop");
    //Edge symbol end:'node-pop'
@@ -2794,18 +2676,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-            //Edge binding end
+      
 
       
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_aex');
 
       });
             //Edge binding end
@@ -2893,7 +2770,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_aex');
 
       });
       //Edge binding end
@@ -2911,13 +2788,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
          })("node-aex");
    //Edge symbol end:'node-aex'
@@ -2971,23 +2842,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-            //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_hyp');
 
       });
             //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_hyp');
 
       });
             //Edge binding end
@@ -3071,13 +2937,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
             })("node-hyp");
    //Edge symbol end:'node-hyp'
@@ -3129,25 +2989,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-            //Edge binding end
+      
 
       
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_sur');
 
       });
             //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_sur');
 
       });
             //Edge binding end
@@ -3243,13 +3098,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
          })("node-sur");
    //Edge symbol end:'node-sur'
@@ -3301,25 +3150,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-            //Edge binding end
+      
 
       
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_fau');
 
       });
             //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_fau');
 
       });
             //Edge binding end
@@ -3404,13 +3248,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2600, function(sym, e) {
          $(".fau-sur").fadeIn(250);
@@ -3468,25 +3306,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-         //Edge binding end
+      
 
       
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_dec');
 
       });
          //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_dec');
 
       });
          //Edge binding end
@@ -3572,13 +3405,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
       })("node-dec");
    //Edge symbol end:'node-dec'
@@ -3620,25 +3447,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-            //Edge binding end
+      
 
       
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_aac');
 
       });
             //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_aac');
 
       });
             //Edge binding end
@@ -3748,13 +3570,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
          })("node-aac");
    //Edge symbol end:'node-aac'
@@ -3806,25 +3622,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-            //Edge binding end
+      
 
       
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_exp');
 
       });
             //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_exp');
 
       });
             //Edge binding end
@@ -3920,13 +3731,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
          })("node-exp");
    //Edge symbol end:'node-exp'
@@ -3980,23 +3785,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-            //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_fut');
 
       });
             //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_fut');
 
       });
             //Edge binding end
@@ -4100,13 +3900,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
             })("node-fut");
    //Edge symbol end:'node-fut'
@@ -4160,23 +3954,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-            //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_syn');
 
       });
             //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_syn');
 
       });
             //Edge binding end
@@ -4269,13 +4058,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
             })("node-syn");
    //Edge symbol end:'node-syn'
@@ -4329,23 +4112,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-               //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_sup');
 
       });
                //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_sup');
 
       });
                //Edge binding end
@@ -4457,13 +4235,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
                })("node-sup");
    //Edge symbol end:'node-sup'
@@ -4675,25 +4447,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-         //Edge binding end
+      
 
       
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_min');
 
       });
          //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_min');
 
       });
          //Edge binding end
@@ -4783,13 +4550,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
       })("node-min");
    //Edge symbol end:'node-min'
@@ -4841,25 +4602,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-         //Edge binding end
+      
 
       
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_adc');
 
       });
          //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_adc');
 
       });
          //Edge binding end
@@ -4951,13 +4707,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
       })("node-adc");
    //Edge symbol end:'node-adc'
@@ -5011,23 +4761,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-               //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_ano');
 
       });
                //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_ano');
 
       });
                //Edge binding end
@@ -5119,13 +4864,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
                })("node-ano");
    //Edge symbol end:'node-ano'
@@ -5179,23 +4918,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-               //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_neu');
 
       });
                //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_neu');
 
       });
                //Edge binding end
@@ -5295,13 +5029,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
                })("node-neu");
    //Edge symbol end:'node-neu'
@@ -5355,23 +5083,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-               //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_nre');
 
       });
                //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_nre');
 
       });
                //Edge binding end
@@ -5458,13 +5181,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
                })("node-nre");
    //Edge symbol end:'node-nre'
@@ -5516,25 +5233,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-               //Edge binding end
+      
 
       
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_bau');
 
       });
                //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_bau');
 
       });
                //Edge binding end
@@ -5583,7 +5295,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	sym.getComposition().getStage().getSymbol("node-nma").play("inactive");
          	sym.getComposition().getStage().getSymbol("node-nou").play("inactive");
          	sym.getComposition().getStage().getSymbol("node-nov").play("inactive");
-         	sym.getComposition().getStage().getSymbol("node-nre").play("inactive");
+         	sym.getComposition().getStage().getSymbol("node-nre").play("active");
          	sym.getComposition().getStage().getSymbol("node-opa").play("active");
          	sym.getComposition().getStage().getSymbol("node-pfa").play("inactive");
          	sym.getComposition().getStage().getSymbol("node-pim").play("inactive");
@@ -5642,13 +5354,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
             })("node-bau");
    //Edge symbol end:'node-bau'
@@ -5702,23 +5408,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-               //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_pit');
 
       });
                //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_pit');
 
       });
                //Edge binding end
@@ -5816,13 +5517,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
                })("node-pit");
    //Edge symbol end:'node-pit'
@@ -5874,25 +5569,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-               //Edge binding end
+      
 
       
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_sre');
 
       });
                //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_sre');
 
       });
                //Edge binding end
@@ -5982,13 +5672,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
             })("node-sre");
    //Edge symbol end:'node-sre'
@@ -6042,23 +5726,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-               //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_dej');
 
       });
                //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_dej');
 
       });
                //Edge binding end
@@ -6156,13 +5835,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
                })("node-dej");
    //Edge symbol end:'node-dej'
@@ -6216,23 +5889,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-               //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_opa');
 
       });
                //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_opa');
 
       });
                //Edge binding end
@@ -6318,13 +5986,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
                })("node-opa");
    //Edge symbol end:'node-opa'
@@ -6378,23 +6040,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-               //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_soc');
 
       });
                //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_soc');
 
       });
                //Edge binding end
@@ -6492,13 +6149,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
                })("node-soc");
    //Edge symbol end:'node-soc'
@@ -6552,23 +6203,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-            //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_ray');
 
       });
             //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_ray');
 
       });
             //Edge binding end
@@ -6660,13 +6306,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
             })("node-ray");
    //Edge symbol end:'node-ray'
@@ -6720,23 +6360,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-               //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_prc');
 
       });
                //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_prc');
 
       });
                //Edge binding end
@@ -6836,13 +6471,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
                })("node-prc");
    //Edge symbol end:'node-prc'
@@ -7056,23 +6685,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-               //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_nma');
 
       });
                //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_nma');
 
       });
                //Edge binding end
@@ -7162,13 +6786,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
                })("node-nma");
    //Edge symbol end:'node-nma'
@@ -7222,23 +6840,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-               //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_boa');
 
       });
                //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_boa');
 
       });
                //Edge binding end
@@ -7330,13 +6943,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
                })("node-boa");
    //Edge symbol end:'node-boa'
@@ -7553,25 +7160,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-                  //Edge binding end
+      
 
       
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_int');
 
       });
                   //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_int');
 
       });
                   //Edge binding end
@@ -7667,13 +7269,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
                })("node-int");
    //Edge symbol end:'node-int'
@@ -7725,25 +7321,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-            //Edge binding end
+      
 
       
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_hit');
 
       });
             //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_hit');
 
       });
             //Edge binding end
@@ -7835,13 +7426,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
          })("node-hit");
    //Edge symbol end:'node-hit'
@@ -7895,23 +7480,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-                  //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_dco');
 
       });
                   //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_dco');
 
       });
                   //Edge binding end
@@ -8001,13 +7581,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
                   })("node-dco");
    //Edge symbol end:'node-dco'
@@ -8061,23 +7635,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-                  //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_bru');
 
       });
                   //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_bru');
 
       });
                   //Edge binding end
@@ -8163,13 +7732,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
                   })("node-bru");
    //Edge symbol end:'node-bru'
@@ -8223,23 +7786,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-               //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_hap');
 
       });
                //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_hap');
 
       });
                //Edge binding end
@@ -8341,13 +7899,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_people}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
                })("node-hap");
    //Edge symbol end:'node-hap'
@@ -8401,23 +7953,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-               //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_ins');
 
       });
                //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_ins');
 
       });
                //Edge binding end
@@ -8513,13 +8060,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
                })("node-ins");
    //Edge symbol end:'node-ins'
@@ -8738,23 +8279,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-                  //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_nov');
 
       });
                   //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_nov');
 
       });
                   //Edge binding end
@@ -8840,13 +8376,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
                   })("node-nov");
    //Edge symbol end:'node-nov'
@@ -8900,16 +8430,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-               //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_nou');
 
       });
                //Edge binding end
@@ -8999,7 +8524,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_nou');
 
       });
       //Edge binding end
@@ -9010,13 +8535,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
                })("node-nou");
    //Edge symbol end:'node-nou'
@@ -9070,23 +8589,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-                  //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_kin');
 
       });
                   //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_kin');
 
       });
                   //Edge binding end
@@ -9172,13 +8686,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
                   })("node-kin");
    //Edge symbol end:'node-kin'
@@ -9315,25 +8823,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-      //Edge binding end
+      
 
       
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_ppa');
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_ppa');
 
       });
       //Edge binding end
@@ -9344,13 +8847,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
             })("node-ppa");
    //Edge symbol end:'node-ppa'
@@ -9404,23 +8901,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-                  //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_mir');
 
       });
                   //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_mir');
 
       });
                   //Edge binding end
@@ -9516,13 +9008,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
                   })("node-mir");
    //Edge symbol end:'node-mir'
@@ -9576,23 +9062,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-            //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_sva');
 
       });
             //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_sva');
 
       });
             //Edge binding end
@@ -9690,13 +9171,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
             })("node-sva");
    //Edge symbol end:'node-sva'
@@ -9748,25 +9223,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-            //Edge binding end
+      
 
       
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_con');
 
       });
             //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_con');
 
       });
             //Edge binding end
@@ -9866,13 +9336,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
          })("node-con");
    //Edge symbol end:'node-con'
@@ -9926,23 +9390,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bounds}", "mouseover", function(sym, e) {
-         sym.play("hover");
-
-      });
-                     //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
+         sym.play("hover");
+         $('#wrapper').kinetic('center_eat');
 
       });
                      //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "touchstart", function(sym, e) {
          sym.play("hover");
-         sym.$("action").fadeIn(250);
+         $('#wrapper').kinetic('center_eat');
 
       });
                      //Edge binding end
@@ -10028,13 +9487,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_action}", "touchend", function(sym, e) {
-         $('body').fadeOut(400, function(){
-         	window.open("../timeline/timeline.html", "_self");
-         });
-
-      });
-      //Edge binding end
+      
 
                      })("node-lan");
    //Edge symbol end:'node-lan'
@@ -10116,8 +9569,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
       
 
-      })("action_C");
-   //Edge symbol end:'action_C'
+      })("action");
+   //Edge symbol end:'action'
 
    //=========================================================
    

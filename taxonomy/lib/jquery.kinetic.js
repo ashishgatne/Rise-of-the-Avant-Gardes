@@ -10,12 +10,12 @@
 	'use strict';
 
     var DEFAULT_SETTINGS = {
-            cursor: 'move',
+            cursor: 'default',
             decelerate: true,
             triggerHardware: false,
-            y: true,
+            y: false,
             x: true,
-            slowdown: 0.9,
+            slowdown: 0.96,
             maxvelocity: 40,
             throttleFPS: 60,
             movingClass: {
@@ -384,14 +384,14 @@
                 detachListeners($this, settings);
                 $this
                 .removeClass(ACTIVE_CLASS)
-                .css("cursor", "");
+                .css("cursor", "default");
             },
             attach: function(settings, options) {
                 var $this = $(this);
                 attachListeners($this, settings);
                 $this
                 .addClass(ACTIVE_CLASS)
-                .css("cursor", "move");
+                .css("cursor", "default");
             }
         }
     };

@@ -53,17 +53,19 @@
 				$('body').css('display', 'none');
 				$('body').fadeIn(1000);
   
+				
 				$('.nav_timeline').click(function(event) {
 					event.preventDefault();
 					newLocation = ('../canvas/canvas.html' + window.location.hash);
-					$('body').fadeOut(400, newpage);
+					window.location = newLocation;
+					/*$('body').fadeOut(400, newpage);*/
 				});
-				function newpage() {
+				/*function newpage() {
 					window.location = newLocation;
 					$('body').fadeIn(800);
-				}
+				};*/
 				goDoIt();
-				$('.arrow').delay(100).fadeIn(1000);
+				/*ARROW: $('.arrow').delay(100).fadeIn(1000);*/
 
 				/* Jump to selected movement (or chapter) on the timeline */
 

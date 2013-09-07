@@ -47,11 +47,10 @@ if(document.addEventListener ){
     };
 
    aLoader = [
-    { load: "../core/lib/jquery-2.0.0.min.js"},
-	{ load: "../core/lib/jquery.easing.1.3.js"},
     { load: "edge_includes/edge.1.0.0.min.js"},
-    { load: "canvas_source_edge.js"},
-    { load: "canvas_source_edgeActions.js"}];
+        {test: !hasJSON, yep:"edge_includes/json2_min.js"},
+          { load: "canvas_source_edge.js"},
+          { load: "canvas_source_edgeActions.js"}];
 
 loadResources(aLoader, doDelayLoad);
 

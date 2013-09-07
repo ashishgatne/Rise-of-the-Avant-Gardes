@@ -12,9 +12,12 @@
 		<link rel="stylesheet" type="text/css" href="core/fonts/typography.css" />
 		<link rel="stylesheet" href="core/ios/add2home.css">
 		<script type="application/javascript" src="core/ios/add2home.js"></script>
+		<script type="application/javascript" src="core/reject/jquery.reject.js"></script>
+		<link rel="stylesheet" type="text/css" href="core/reject/jquery.reject.css" />
 		<style>
 			#container		{ position: relative; max-width: 720px; margin-left: auto; margin-right: auto; cursor: default; }
 			.introduction	{ font-family: 'Source Sans Pro', sans-serif; font-weight: 300; font-size: 15pt; color:#666; line-height: 1.5; text-align: center; padding: 2em 0 2em 0;}
+			.warning		{ font-family: 'Source Sans Pro', sans-serif; font-weight: 500; font-size: 15pt; color:#f00; line-height: 1.5; text-align: center; padding: 2em 0 2em 0;}
 			h1 				{ font-family: 'Radley', serif; font-weight: 400; font-size: 36pt; color:#333; text-shadow: 0px 1px 2px #ccc; text-align: center; }
 			#title			{ font-size: 48pt; }
 			#button			{ margin:0 auto; text-align: center; width: 360px;  }
@@ -32,6 +35,13 @@
 			$(document).ready(function() {
 				$('#container').css("top", window.innerHeight/3);
 				$('body').css('display', 'none');
+			    $.reject({  
+			        reject: {  
+			            chrome: true,
+			            opera: true,
+			            /*unknown: true*/
+			        }  
+			    });
 				$('body').fadeIn(800);
 			});
 			$(window).resize(function () {
@@ -45,6 +55,7 @@
 		<div id="container">
 			<h1>Rise of the<br/><span id="title">Avant-Gardes</span></h1>
 			<p class="introduction">Avant-garde refers to people or works that are experimental or innovative, particularly with respect to art, culture, and politics. It represents a pushing of the boundaries of what is accepted as the norm or the status quo, primarily in the cultural realm.</p>
+			<!--<p class="warning">The current build is broken on Chrome 29. If the page freezes on entering, please use Firefox, Safari or Internet Explorer until the issue is resolved.</p>-->
 			<noscript><p class="introduction">JavaScript must be enabled to use this site.<br />Please enable JavaScript in your browser and refresh the page.</p></noscript>
 			<nav id="button"><a class="enter link" href="canvas/canvas.html#impressionism">START EXPLORING</a></nav>
 		</div>

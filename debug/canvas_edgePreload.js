@@ -47,7 +47,7 @@ if(document.addEventListener ){
     };
 
    aLoader = [
-    { load: "edge_includes/jquery-1.7.1.min.js"},
+    /*{ load: "edge_includes/jquery-1.7.1.min.js"},*/
     { load: "edge_includes/jquery.easing.1.3.js"},
     { load: "edge_includes/edge.1.0.0.min.js"},
         {test: !hasJSON, yep:"edge_includes/json2_min.js"},

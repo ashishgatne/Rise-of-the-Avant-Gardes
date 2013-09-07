@@ -3,6 +3,10 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="137.5px" height="100px" viewBox="0 0 137.5 100" enable-background="new 0 0 137.5 100" xml:space="preserve">
-<polyline fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" points="125,12.5 87.375,50 125,87.5 "/>
-<polyline fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" points="12.5,12.5 49.875,50 12.5,87.5 "/>
+<g>
+	<path d="M121,22.134v55.732L93.041,50L121,22.134 M125,12.5L87.375,50L125,87.5V12.5L125,12.5z"/>
+</g>
+<g>
+	<path d="M16.5,22.18L44.228,50L16.5,77.82V22.18 M12.5,12.5v75L49.875,50L12.5,12.5L12.5,12.5z"/>
+</g>
 </svg>

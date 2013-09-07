@@ -1,11 +1,10 @@
+body						{ overflow: hidden; }
+div 						{ -webkit-touch-callout: none;  -webkit-user-select: none;  -moz-user-select: none; }
+
 .navigate					{ position: fixed; z-index: 100000; height: 42pt; width: 42pt; background-color: #333; background-size: 100%; background-repeat:no-repeat; cursor:pointer; }
 .navigate:hover				{ background-color: #000; }
 .navigate:active			{ background-color: #000; }
 .nav_timeline				{ top:0; right:0; background-image:url('../img/vector_exit.svg');}
-
-#bookmarks 					{ position: fixed; width: 100%; top:700px; text-align: center; }
-.anchors 					{ font-family: 'Radley', serif; font-weight: 400; color: #666; font-size: 21pt; font-variant:small-caps; line-height: 1.2; text-shadow: 0px 1px 2px #ccc; padding: 2pt 24pt; text-decoration: none; white-space:nowrap; }
-.anchors:active				{ color: #fff; background-color: #333; text-shadow: 0px 0px 2px #fff; }
 
 #wrapper 					{ overflow: hidden; }
 #inner 						{ position: relative; width: 6000px; height: 600px; }

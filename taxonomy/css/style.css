@@ -120,7 +120,6 @@ ul, ol {
 
 a,
 a code {
-  color: #FB4;
   text-decoration: none;
 }
 
@@ -258,9 +257,17 @@ body {
 /**** Example Options ****/
 
 #options {
-  padding-bottom: 1.0em;
-  position: fixed;
-  bottom:0;
+	position: fixed;
+  top:8pt;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 500;
+  color: #666;
+  font-size: 12pt;
+  line-height: 1;
+  text-shadow: 0px 1px 2px #ccc;
+  padding: 4pt 16pt;
+  white-space:nowrap;
+
 }
 
 #options h3 {
@@ -288,28 +295,21 @@ body {
 
 #options li a {
   display: block;
-  padding: 0.4em 0.5em;
-  background-color: #DDD;
-  color: #222;
-  font-weight: bold;
-  text-shadow: 0 1px hsla( 0, 0%, 100%, 0.5 );
+  padding: 6pt 9pt;
+  background-color: #f8f8f8;
+  color: #333;
 }
 
 #options li a:hover {
-  background-color: #5BF;
+  background-color: #ccc;
 }
 
 #options li a:active {
-  background-color: #39D;
-}
-
-#options li a {
-  border-left:  1px solid hsla( 0, 0%, 100%, 0.3 );
-  border-right: 1px solid hsla( 0, 0%,   0%, 0.2 );
+  background-color: #000;
 }
 
 #options li a.selected {
-  background-color: #13F;
+  background-color: #333;
   text-shadow: none;
   color: white;
 }
@@ -319,7 +319,6 @@ body {
 #options .option-combo {
   display: inline-block;
   float: left;
-  margin-right: 10px;
 }
 
 #options .option-combo ul {
@@ -353,18 +352,20 @@ body {
   height: 080px;
 }
 
-.origins { background: red; }
-.worldwars { background: blue; }
-.contemporary { background: green; }
-
-.color-shape a {
-  display: block;
-  height: 100%;
+.color-shape {
+	display: block;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	font-size: 16px;
 }
 
-.color-shape a:hover {
-  background: white;
-  background: hsla( 0, 0%, 100%, 0.5 );
+.color-shape a {
+position:relative;
+	top: 140px;
+  	color: #333;
+  	height: 18px;
+  	background-color: #fff;
+  	padding: 0px 4px;
 }
 
 /**** Horizontal ****/
@@ -455,7 +456,6 @@ body {
 
 #site-nav ul .current a {
   background: hsla( 0, 0%, 0%, 0.3 );
-  color: #1BF;
 }
 #site-nav ul a:hover,
 #site-nav ul .current a:hover { color: white; }

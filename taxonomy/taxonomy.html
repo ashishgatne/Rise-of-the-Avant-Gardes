@@ -6,18 +6,82 @@
 		<title>Rise of the Avant-Gardes</title>
 		<link rel="shortcut icon" href="../core/icons/favicon.png" />
 		<script src="../core/lib/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/jquery.easing.1.3.js" type="text/javascript"></script>
 		<script src="lib/jquery.kinetic.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/jquery.kinetic.offset.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="../core/css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<link rel="stylesheet" type="text/css" href="css/taxonomy.css" />
+		<link rel="stylesheet" type="text/css" href="css/taxonomy_normal.css" />
 		<link rel="stylesheet" type="text/css" href="fonts/typography.css" />
 		<script type="text/javascript">
 			$(document).ready(function() {
+				goDoIt();
 				$('body').css('display', 'none');
 				$('body').fadeIn(800);
-				$('.arrow').delay(100).fadeIn(1000);
+				/*ARROW: $('.arrow').delay(100).fadeIn(1000);*/
+        	});
+        	$(window).resize(function() {
+				goDoIt();
 			});
+			function goDoIt() {
+				$('#wrapper').css("height",window.innerHeight);
+				$('#inner').css("top",(window.innerHeight/2)-300);
+			};
 		</script>
+		<style type="text/css">
+			#aex { background-image:url('gfx/abstract_expressionism.png'); }
+			#aac { background-image:url('gfx/arts_and_crafts.png'); }
+			#adc { background-image:url('gfx/art_deco.png'); }
+			#ano { background-image:url('gfx/art_nouveau.png'); }
+			#asm { background-image:url('gfx/assemblage.png'); }
+			#ava { background-image:url('gfx/audiovisual_art.png'); }
+			#bau { background-image:url('gfx/bauhaus.png'); }
+			#boa { background-image:url('gfx/body_art.png'); }
+			#bru { background-image:url('gfx/brutalism.png'); }
+			#coa { background-image:url('gfx/conceptual_art.png'); }
+			#con { background-image:url('gfx/constructivism.png'); }
+			#cub { background-image:url('gfx/cubism.png'); }
+			#dad { background-image:url('gfx/dada.png'); }
+			#dsj { background-image:url('gfx/de_stijl.png'); }
+			#dec { background-image:url('gfx/decadence.png'); }
+			#dco { background-image:url('gfx/deconstructivism.png'); }
+			#exp { background-image:url('gfx/expressionism.png'); }
+			#fau { background-image:url('gfx/fauvism.png'); }
+			#flx { background-image:url('gfx/fluxus.png'); }
+			#fut { background-image:url('gfx/futurism.png'); }
+			#hap { background-image:url('gfx/happening.png'); }
+			#hit { background-image:url('gfx/high_tech.png'); }
+			#imp { background-image:url('gfx/impressionism.png'); }
+			#ins { background-image:url('gfx/installation.png'); }
+			#int { background-image:url('gfx/international_style.png'); }
+			#kin { background-image:url('gfx/kinetic_art.png'); }
+			#lda { background-image:url('gfx/land_art.png'); }
+			#met { background-image:url('gfx/metaphysical_art.png'); }
+			#min { background-image:url('gfx/minimalism.png'); }
+			#nat { background-image:url('gfx/nationalist_realism.png'); }
+			#nda { background-image:url('gfx/neo_dada.png'); }
+			#nex { background-image:url('gfx/neo_expressionism.png'); }
+			#neo { background-image:url('gfx/new_objectivity.png'); }
+			#nwa { background-image:url('gfx/new_media.png'); }
+			#nim { background-image:url('gfx/neo_impressionism.png'); }
+			#nre { background-image:url('gfx/new_realism.png'); }
+			#nov { background-image:url('gfx/novecento_italiano.png'); }
+			#opa { background-image:url('gfx/op_art.png'); }
+			#pfa { background-image:url('gfx/performance_art.png'); }
+			#pre { background-image:url('gfx/photorealism.png'); }
+			#pop { background-image:url('gfx/pop_art.png'); }
+			#pim { background-image:url('gfx/post_impressionism.png'); }
+			#ppa { background-image:url('gfx/post_painterly_abstraction.png'); }
+			#pre { background-image:url('gfx/precisionism.png'); }
+			#ray { background-image:url('gfx/rayonism.png'); }
+			#reg { background-image:url('gfx/regionalism.png'); }
+			#soc { background-image:url('gfx/social_realism.png'); }
+			#sre { background-image:url('gfx/socialist_realism.png'); }
+			#sup { background-image:url('gfx/suprematism.png'); }
+			#sur { background-image:url('gfx/surrealism.png'); }
+			#syn { background-image:url('gfx/synchromism.png'); }
+			#tac { background-image:url('gfx/tachism.png'); }
+		</style>
 	</head>
 	<body>
 		<div class="navigate nav_timeline" onclick="location.href='../canvas/canvas.html#impressionism';"></div>
@@ -27,91 +91,98 @@
 			<div class="option-combo period">
 			<!--<h4>Era</h4>-->
 				<ul class="filter option-set clearfix " data-filter-group="color"> 
-					<li><a href="#filter-period-all" data-filter-value="" class="selected">All Eras</a></li>
-					<li><a href="#filter-period-origins" data-filter-value=".origins">Roots of Modernism</a></li>
-					<li><a href="#filter-period-worldwars" data-filter-value=".worldwars">The World Wars</a></li>
-					<li><a href="#filter-period-contemporary" data-filter-value=".contemporary">Contemporary Art</a></li>
+					<li><a href="#filter-period-all" data-filter-value="" class="selected anchor">All Eras</a></li>
+					<li><a href="#filter-period-origins" data-filter-value=".origins" class="anchor">The Origins</a></li>
+					<li><a href="#filter-period-worldwars" data-filter-value=".worldwars" class="anchor">World Wars</a></li>
+					<li><a href="#filter-period-contemporary" data-filter-value=".contemporary" class="anchor">Contemporary</a></li>
 				</ul>
 			</div>
 			<div class="option-combo type">
 			<!--<h4>Association</h4>-->
 				<ul class="filter option-set clearfix " data-filter-group="shape"> 
-					<li><a href="#filter-type-all" data-filter-value="" class="selected">Everything</a></li>
-					<li><a href="#filter-type-movements" data-filter-value=".movement">Movements</a></li>
-					<!--<li><a href="#filter-type-schools" data-filter-value=".school">Organisation</a></li>-->
-					<li><a href="#filter-type-people" data-filter-value=".people">Individuals</a></li>
+					<li><a href="#filter-type-all" data-filter-value="" class="selected anchor">Art</a></li>
+					<li><a href="#filter-type-movements" data-filter-value=".movement" class="anchor">Movements</a></li>
+					<!--<li><a href="#filter-type-schools" data-filter-value=".school" class="anchor">Organisation</a></li>-->
+					<li><a href="#filter-type-people" data-filter-value=".people" class="anchor">People</a></li>
+				</ul>
+			</div>
+			<div class="option-combo order">
+			<!--<h4>Order</h4>-->
+				<ul class="filter option-set clearfix " data-filter-group="order"> 
+					<li><a href="#filter-type-alphabetical" data-filter-value=".alphabetical" class="selected anchor">Alphabetical</a></li>
+					<li><a href="#filter-type-chronological" data-filter-value=".chronological" class="anchor">Chronological</a></li>
 				</ul>
 			</div>
 		</div>
 		<div id="wrapper">
             <div id="inner">
 				<div id="container" class="clearfix">
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/abstract_expressionism.png"></a></div>
-					<div class="color-shape origins movement"><a href="../timeline/timeline.html"><img src="gfx/arts_and_crafts.png"></a></div>
-					<div class="color-shape worldwars movement"><a href="../timeline/timeline.html"><img src="gfx/art_deco.png"></a></div>
-					<div class="color-shape origins movement"><a href="../timeline/timeline.html"><img src="gfx/art_nouveau.png"></a></div>
+					<div id="aex" class="color-shape contemporary movement"><a href="../timeline/timeline.html">abstract&nbsp;expressionism</a></div>
+					<div id="aac" class="color-shape origins movement"><a href="../timeline/timeline.html">arts&nbsp;and&nbsp;crafts</a></div>
+					<div id="adc" class="color-shape worldwars movement"><a href="../timeline/timeline.html">art&nbsp;deco</a></div>
+					<div id="ano" class="color-shape origins movement"><a href="../timeline/timeline.html">art&nbsp;nouveau</a></div>
 					<!--<div class="color-shape origins school">Ashcan School</div>-->
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/assemblage.png"></a></div>
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/audiovisual_art.png"></a></div>
-					<div class="color-shape worldwars movement"><a href="../timeline/timeline.html"><img src="gfx/bauhaus.png"></a></div>
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/body_art.png"></a></div>
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/brutalism.png"></a></div>
+					<div id="asm" class="color-shape contemporary movement"><a href="../timeline/timeline.html">assemblage</a></div>
+					<div id="ava" class="color-shape contemporary movement"><a href="../timeline/timeline.html">audiovisual&nbsp;art</a></div>
+					<div id="bau" class="color-shape worldwars movement"><a href="../timeline/timeline.html">bauhaus</a></div>
+					<div id="boa" class="color-shape contemporary movement"><a href="../timeline/timeline.html">body&nbsp;art</a></div>
+					<div id="bru" class="color-shape contemporary movement"><a href="../timeline/timeline.html">brutalism</a></div>
 					<!--<div class="color-shape origins school">Bubnovyi Valet</div>-->
 					<!--<div class="color-shape worldwars school">Central Surrealiste</div>-->
 					<!--<div class="color-shape origins school">Chicago School</div>-->
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/conceptual_art.png"></a></div>
-					<div class="color-shape worldwars movement"><a href="../timeline/timeline.html"><img src="gfx/constructivism.png"></a></div>
-					<div class="color-shape origins movement"><a href="../timeline/timeline.html"><img src="gfx/cubism.png"></a></div>
-					<div class="color-shape worldwars movement"><a href="../timeline/timeline.html"><img src="gfx/dada.png"></a></div>
-					<div class="color-shape worldwars movement"><a href="../timeline/timeline.html"><img src="gfx/de_stijl.png"></a></div>
-					<div class="color-shape origins movement"><a href="../timeline/timeline.html"><img src="gfx/decadence.png"></a></div>
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/deconstructivism.png"></a></div>
+					<div id="coa" class="color-shape contemporary movement"><a href="../timeline/timeline.html">conceptual&nbsp;art</a></div>
+					<div id="con" class="color-shape worldwars movement"><a href="../timeline/timeline.html">constructivism</a></div>
+					<div id="cub" class="color-shape origins movement"><a href="../timeline/timeline.html">cubism</a></div>
+					<div id="dad" class="color-shape worldwars movement"><a href="../timeline/timeline.html">dada</a></div>
+					<div id="dsj" class="color-shape worldwars movement"><a href="../timeline/timeline.html">de&nbsp;stijl</a></div>
+					<!--<div id="dec" class="color-shape origins movement"><a href="../timeline/timeline.html">decadence</a></div>-->
+					<div id="dco" class="color-shape contemporary movement"><a href="../timeline/timeline.html">deconstructivism</a></div>
 					<!--<div class="color-shape origins school">Der Blaue Reiter</div>-->
 					<!--<div class="color-shape origins school">Deutscher Werkbund</div>-->
 					<!--<div class="color-shape origins school">Die Brucke</div>-->
 					<!--<div class="color-shape origins school">Ecole de Paris</div>-->
-					<div class="color-shape origins movement"><a href="../timeline/timeline.html"><img src="gfx/expressionism.png"></a></div>
-					<div class="color-shape origins movement"><a href="../timeline/timeline.html"><img src="gfx/fauvism.png"></a></div>
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/fluxus.png"></a></div>
-					<div class="color-shape origins movement"><a href="../timeline/timeline.html"><img src="gfx/futurism.png"></a></div>
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/happening.png"></a></div>
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/high_tech.png"></a></div>
-					<div class="color-shape origins movement"><a href="../timeline/impressionism.html#impressionism"><img src="gfx/impressionism.png"></a></div>
+					<div id="exp" class="color-shape origins movement"><a href="../timeline/timeline.html">expressionism</a></div>
+					<div id="fau" class="color-shape origins movement"><a href="../timeline/timeline.html">fauvism</a></div>
+					<div id="flx" class="color-shape contemporary movement"><a href="../timeline/timeline.html">fluxus</a></div>
+					<div id="fut" class="color-shape origins movement"><a href="../timeline/timeline.html">futurism</a></div>
+					<div id="hap" class="color-shape contemporary movement"><a href="../timeline/timeline.html">happening</a></div>
+					<div id="hit" class="color-shape contemporary movement"><a href="../timeline/timeline.html">high&nbsp;tech</a></div>
+					<div id="imp" class="color-shape origins movement"><a href="../timeline/impressionism.html#impressionism">impressionism</a></div>
 					<!--<div class="color-shape contemporary school">Independent Group</div>-->
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/installation.png"></a></div>
-					<div class="color-shape worldwars movement"><a href="../timeline/timeline.html"><img src="gfx/international_style.png"></a></div>
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/kinetic_art.png"></a></div>
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/land_art.png"></a></div>
+					<div id="ins" class="color-shape contemporary movement"><a href="../timeline/timeline.html">installation</a></div>
+					<div id="int" class="color-shape worldwars movement"><a href="../timeline/timeline.html">international&nbsp;style</a></div>
+					<div id="kin" class="color-shape contemporary movement"><a href="../timeline/timeline.html">kinetic&nbsp;art</a></div>
+					<div id="lda" class="color-shape contemporary movement"><a href="../timeline/timeline.html">land&nbsp;art</a></div>
 					<!--<div class="color-shape origins school">Les Fauves</div>-->
-					<div class="color-shape worldwars movement"><a href="../timeline/timeline.html"><img src="gfx/metaphysical_art.png"></a></div>
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/minimalism.png"></a></div>
-					<div class="color-shape worldwars movement"><a href="../timeline/timeline.html"><img src="gfx/nationalist_realism.png"></a></div>
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/neo_dada.png"></a></div>
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/neo_expressionism.png"></a></div>
-					<div class="color-shape worldwars movement"><a href="../timeline/timeline.html"><img src="gfx/new_objectivity.png"></a></div>
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/new_media.png"></a></div>
-					<div class="color-shape origins movement"><a href="../timeline/timeline.html"><img src="gfx/neo_impressionism.png"></a></div>
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/new_realism.png"></a></div>
+					<div id="met" class="color-shape worldwars movement"><a href="../timeline/timeline.html">metaphysical&nbsp;art</a></div>
+					<div id="min" class="color-shape contemporary movement"><a href="../timeline/timeline.html">minimalism</a></div>
+					<div id="nat" class="color-shape worldwars movement"><a href="../timeline/timeline.html">nationalist&nbsp;realism</a></div>
+					<div id="nda" class="color-shape contemporary movement"><a href="../timeline/timeline.html">neo&nbsp;dada</a></div>
+					<div id="nex" class="color-shape contemporary movement"><a href="../timeline/timeline.html">neo&nbsp;expressionism</a></div>
+					<div id="neo" class="color-shape worldwars movement"><a href="../timeline/timeline.html">new&nbsp;objectivity</a></div>
+					<div id="nwa" class="color-shape contemporary movement"><a href="../timeline/timeline.html">new&nbsp;media</a></div>
+					<div id="nim" class="color-shape origins movement"><a href="../timeline/timeline.html">neo&nbsp;impressionism</a></div>
+					<div id="nre" class="color-shape contemporary movement"><a href="../timeline/timeline.html">new&nbsp;realism</a></div>
 					<!--<div class="color-shape contemporary school">Nouveau Realistes</div>-->
-					<div class="color-shape worldwars movement"><a href="../timeline/timeline.html"><img src="gfx/novecento_italiano.png"></a></div>
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/op_art.png"></a></div>
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/performance_art.png"></a></div>
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/photorealism.png"></a></div>
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/pop_art.png"></a></div>
-					<div class="color-shape origins movement"><a href="../timeline/impressionism.html#post-impressionism"><img src="gfx/post_impressionism.png"></a></div>
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/post_painterly_abstraction.png"></a></div>
-					<div class="color-shape worldwars movement"><a href="../timeline/timeline.html"><img src="gfx/precisionism.png"></a></div>
+					<div id="nov" class="color-shape worldwars movement"><a href="../timeline/timeline.html">novecento&nbsp;italiano</a></div>
+					<div id="opa" class="color-shape contemporary movement"><a href="../timeline/timeline.html">op&nbsp;art</a></div>
+					<div id="pfa" class="color-shape contemporary movement"><a href="../timeline/timeline.html">performance&nbsp;art</a></div>
+					<div id="pre" class="color-shape contemporary movement"><a href="../timeline/timeline.html">photorealism</a></div>
+					<div id="pop" class="color-shape contemporary movement"><a href="../timeline/timeline.html">pop&nbsp;art</a></div>
+					<div id="pim" class="color-shape origins movement"><a href="../timeline/impressionism.html#post-impressionism">post&nbsp;impressionism</a></div>
+					<div id="ppa" class="color-shape contemporary movement"><a href="../timeline/timeline.html">post&nbsp;painterly&nbsp;abstraction</a></div>
+					<div id="pre" class="color-shape worldwars movement"><a href="../timeline/timeline.html">precisionism</a></div>
 					<!--<div class="color-shape worldwars school">Proletkult</div>-->
-					<div class="color-shape origins movement"><a href="../timeline/timeline.html"><img src="gfx/rayonism.png"></a></div>
-					<div class="color-shape worldwars movement"><a href="../timeline/timeline.html"><img src="gfx/regionalism.png"></a></div>
+					<div id="ray" class="color-shape origins movement"><a href="../timeline/timeline.html">rayonism</a></div>
+					<div id="reg" class="color-shape worldwars movement"><a href="../timeline/timeline.html">regionalism</a></div>
 					<!--<div class="color-shape worldwars school">Reichkulturkammer</div>-->
 					<!--<div class="color-shape contemporary school">Situationists International</div>-->
-					<div class="color-shape worldwars movement"><a href="../timeline/timeline.html"><img src="gfx/social_realism.png"></a></div>
-					<div class="color-shape worldwars movement"><a href="../timeline/timeline.html"><img src="gfx/socialist_realism.png"></a></div>
-					<div class="color-shape origins movement"><a href="../timeline/timeline.html"><img src="gfx/suprematism.png"></a></div>
-					<div class="color-shape worldwars movement"><a href="../timeline/timeline.html"><img src="gfx/surrealism.png"></a></div>
-					<div class="color-shape origins movement"><a href="../timeline/timeline.html"><img src="gfx/synchromism.png"></a></div>
-					<div class="color-shape contemporary movement"><a href="../timeline/timeline.html"><img src="gfx/tachism.png"></a></div>
+					<div id="soc" class="color-shape worldwars movement"><a href="../timeline/timeline.html">social&nbsp;realism</a></div>
+					<div id="sre" class="color-shape worldwars movement"><a href="../timeline/timeline.html">socialist&nbsp;realism</a></div>
+					<div id="sup" class="color-shape origins movement"><a href="../timeline/timeline.html">suprematism</a></div>
+					<div id="sur" class="color-shape worldwars movement"><a href="../timeline/timeline.html">surrealism</a></div>
+					<div id="syn" class="color-shape origins movement"><a href="../timeline/timeline.html">synchromism</a></div>
+					<div id="tac" class="color-shape contemporary movement"><a href="../timeline/timeline.html">tachism</a></div>
 					<!--<div class="color-shape worldwars school">Vhkutemas</div>-->
 				</div>
 			</div>
@@ -129,6 +200,11 @@
 				$('#wrapper').kinetic('start', { velocity: 10 });
 				}) .mouseup (function() {
 				$('#wrapper').kinetic('end');
+			});
+			$('.anchor').click(function(event){
+				event.preventDefault();
+				$("#container").focus();
+				$('#wrapper').kinetic('reverse');
 			});
 			var $container = $('#container'),
 				filters = {};

@@ -141,7 +141,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_bounds}", "click", function(sym, e) {
-         window.open("../timeline/timeline.html#impressionism", "_self");
+         $('#wrapper').kinetic('center_imp');
 
       });
       //Edge binding end
@@ -169,7 +169,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_nav-touch}", "click", function(sym, e) {
-         window.open("../timeline/timeline.html#impressionism", "_self");
+         $('#wrapper').kinetic('center_imp');
 
       });
       //Edge binding end
